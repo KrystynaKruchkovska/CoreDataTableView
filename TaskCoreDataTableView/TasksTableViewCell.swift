@@ -13,10 +13,12 @@ class TasksTableViewCell: UITableViewCell {
  
     @IBOutlet weak var taskNumberLbl: UILabel!
     @IBOutlet weak var taskLabel: UILabel!
+    @IBOutlet weak var prioritylevel: UILabel!
     
     func configureCell(task:Task, taskNum:Int){
         self.taskLabel.text = task.taskDescription
-        self.taskNumberLbl.text! = "\(taskNum)"
+        self.taskNumberLbl.text = "\(taskNum)"
+        self.prioritylevel.text = task.priorityLevel
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -14,10 +14,11 @@ class CoreTasksModelView {
     public var tasks:[Task] = []
     let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     
-    func addTask (textFieldText:String){
+    func addTask (textFieldText:String, priorityLevel:String){
         guard let manegedContext = container?.viewContext else{return}
         let taskObject = Task(context: manegedContext)
         taskObject.taskDescription = textFieldText
+        taskObject.priorityLevel = priorityLevel
         appendTask(task: taskObject)
     }
     
@@ -54,4 +55,5 @@ class CoreTasksModelView {
             debugPrint("Could not remove\(error.localizedDescription)")
         }
     }
+
 }
