@@ -11,7 +11,7 @@ import UIKit
 class AddEmloyeeInfoVC: UIViewController {
     var coreUserViewModel:CoreEmloyeesViewModel!
     let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
-   
+    var delegate:AddEmloyeeInfoVCDelegate?
     
     var defaulPhoto = UIImage(named: "default-user")
     @IBOutlet weak var profileImgView: UIImageView!
@@ -20,8 +20,6 @@ class AddEmloyeeInfoVC: UIViewController {
     @IBOutlet weak var positionTxtFld: UITextField!
     
  
-   // var delegate:AddEmployeeInfoVCDelegate!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -31,6 +29,9 @@ class AddEmloyeeInfoVC: UIViewController {
         
         if let employee = employee {
             appendEmployee(employee: employee)
+            if let delegate = self.delegate {
+                delegate.employeeAdded()
+            }
             self.dismiss(animated: true, completion: nil)
         } else {
             // show alert to user thtat something went wrong
@@ -71,4 +72,8 @@ class AddEmloyeeInfoVC: UIViewController {
     }
     
     
+}
+
+protocol AddEmloyeeInfoVCDelegate {
+    func employeeAdded()
 }

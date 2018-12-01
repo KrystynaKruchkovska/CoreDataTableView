@@ -8,7 +8,13 @@
 
 import UIKit
 
-class EmployeeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class EmployeeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddEmloyeeInfoVCDelegate {
+    
+    
+    func employeeAdded() {
+        self.tableView.reloadData()
+    }
+    
     
     let coreEmloyeesViewModel = CoreEmloyeesViewModel()
 
@@ -18,19 +24,19 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-    
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.tableView.reloadData()
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        self.tableView.reloadData()
+//    }
     
     @IBAction func addBtnWasPressed(_ sender: Any) {
         
         let addEmployee = AddEmloyeeInfoVC()
         addEmployee.coreUserViewModel = self.coreEmloyeesViewModel
-        addEmployee.modalPresentationStyle = .fullScreen
+        addEmployee.modalPresentationStyle = .custom
+        addEmployee.delegate = self
         present(addEmployee, animated: true, completion: nil)
     }
     
