@@ -15,12 +15,26 @@ class EnteringViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tap = UITapGestureRecognizer(target: self, action: Selector(("tapFunction:")))
-        taskList.addGestureRecognizer(tap)
+        self.setupGestures()
     }
     
-    func tapFunction(sender:UITapGestureRecognizer) {
-        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TasksViewController") as? TasksViewController
+    func setupGestures(){
+        let tapForTasks = UITapGestureRecognizer(target: self, action: #selector (tapFunctionforTasks(sender:)))
+        let tapForEmployeeList = UITapGestureRecognizer(target: self, action: #selector (tapFunctionforEmployee(sender:)))
+        taskList.addGestureRecognizer(tapForTasks)
+        taskList.isUserInteractionEnabled = true
+        empoyeeList.addGestureRecognizer(tapForEmployeeList)
+        empoyeeList.isUserInteractionEnabled = true
+    }
+    
+    @objc func tapFunctionforTasks(sender:UITapGestureRecognizer) {
+        if let vc = UIStoryboard(name:CONSTANTS.main, bundle: nil).instantiateViewController(withIdentifier: VIEW_CONTROLLERS_IDENTIFIRES.tasksVC) as? TasksViewController
+        {
+            present(vc, animated: true, completion: nil)
+        }
+    }
+    @objc func tapFunctionforEmployee(sender:UITapGestureRecognizer) {
+        if let vc = UIStoryboard(name: CONSTANTS.main, bundle: nil).instantiateViewController(withIdentifier: VIEW_CONTROLLERS_IDENTIFIRES.employeeVC) as? EmployeeViewController
         {
             present(vc, animated: true, completion: nil)
         }

@@ -25,6 +25,12 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.layer.cornerRadius = 20
     }
     
+    
+    @IBAction func backButtonWasPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 

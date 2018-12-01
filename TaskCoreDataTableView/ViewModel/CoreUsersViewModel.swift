@@ -6,11 +6,14 @@
 //  Copyright © 2018 CO.KrystynaKruchcovska. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CoreData
 
-class CoreUsersViewModel{
+class CoreUsersViewModel {
+    public var users:[User] = []
+    let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     
-    
-    
+    func addUser(){
+        
+    }
 }

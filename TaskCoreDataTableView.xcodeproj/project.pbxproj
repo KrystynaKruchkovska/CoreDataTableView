@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		04096BE121B146AE002DDD08 /* CoreUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04096BE021B146AE002DDD08 /* CoreUsersViewModel.swift */; };
 		04096BF321B15758002DDD08 /* EnteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04096BF221B15758002DDD08 /* EnteringViewController.swift */; };
-		04096BF521B15DEB002DDD08 /* EmpoyeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04096BF421B15DEB002DDD08 /* EmpoyeeViewController.swift */; };
+		04096BF521B15DEB002DDD08 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04096BF421B15DEB002DDD08 /* EmployeeViewController.swift */; };
 		04096BF721B19B4D002DDD08 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04096BF621B19B4D002DDD08 /* EmployeeTableViewCell.swift */; };
 		04096BFA21B2AE59002DDD08 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04096BF921B2AE59002DDD08 /* User.swift */; };
+		04096C1721B2C79B002DDD08 /* AddEmloyeeInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04096C1521B2C79B002DDD08 /* AddEmloyeeInfoVC.swift */; };
+		04096C1821B2C79B002DDD08 /* AddEmloyeeInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04096C1621B2C79B002DDD08 /* AddEmloyeeInfoVC.xib */; };
 		04A028E221AF050C0046F798 /* Tasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04A028E021AF050C0046F798 /* Tasks.xcdatamodeld */; };
 		04A028E421AF08090046F798 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A028E321AF08090046F798 /* Task.swift */; };
 		04A028E621AF09EB0046F798 /* CoreTasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A028E521AF09EB0046F798 /* CoreTasksViewModel.swift */; };
@@ -27,9 +29,11 @@
 /* Begin PBXFileReference section */
 		04096BE021B146AE002DDD08 /* CoreUsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreUsersViewModel.swift; sourceTree = "<group>"; };
 		04096BF221B15758002DDD08 /* EnteringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnteringViewController.swift; sourceTree = "<group>"; };
-		04096BF421B15DEB002DDD08 /* EmpoyeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpoyeeViewController.swift; sourceTree = "<group>"; };
+		04096BF421B15DEB002DDD08 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
 		04096BF621B19B4D002DDD08 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
 		04096BF921B2AE59002DDD08 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		04096C1521B2C79B002DDD08 /* AddEmloyeeInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmloyeeInfoVC.swift; sourceTree = "<group>"; };
+		04096C1621B2C79B002DDD08 /* AddEmloyeeInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddEmloyeeInfoVC.xib; sourceTree = "<group>"; };
 		04A028E121AF050C0046F798 /* Tasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tasks.xcdatamodel; sourceTree = "<group>"; };
 		04A028E321AF08090046F798 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		04A028E521AF09EB0046F798 /* CoreTasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTasksViewModel.swift; sourceTree = "<group>"; };
@@ -58,9 +62,10 @@
 		04096BDD21B144AA002DDD08 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				04F7EC1021AB192A00E3C0D0 /* TasksViewController.swift */,
 				04096BF221B15758002DDD08 /* EnteringViewController.swift */,
-				04096BF421B15DEB002DDD08 /* EmpoyeeViewController.swift */,
+				04F7EC1021AB192A00E3C0D0 /* TasksViewController.swift */,
+				04096BF421B15DEB002DDD08 /* EmployeeViewController.swift */,
+				04096C1521B2C79B002DDD08 /* AddEmloyeeInfoVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 		04F7EC0221AB192A00E3C0D0 = {
 			isa = PBXGroup;
 			children = (
+				04096C1621B2C79B002DDD08 /* AddEmloyeeInfoVC.xib */,
 				04F7EC0D21AB192A00E3C0D0 /* TaskCoreDataTableView */,
 				04F7EC0C21AB192A00E3C0D0 /* Products */,
 			);
@@ -192,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04096C1821B2C79B002DDD08 /* AddEmloyeeInfoVC.xib in Resources */,
 				04F7EC1921AB193200E3C0D0 /* LaunchScreen.storyboard in Resources */,
 				04F7EC1621AB193200E3C0D0 /* Assets.xcassets in Resources */,
 				04F7EC1421AB192A00E3C0D0 /* Main.storyboard in Resources */,
@@ -208,7 +215,7 @@
 				04A028E221AF050C0046F798 /* Tasks.xcdatamodeld in Sources */,
 				04F7EC2121AB21F900E3C0D0 /* TasksTableViewCell.swift in Sources */,
 				04096BE121B146AE002DDD08 /* CoreUsersViewModel.swift in Sources */,
-				04096BF521B15DEB002DDD08 /* EmpoyeeViewController.swift in Sources */,
+				04096BF521B15DEB002DDD08 /* EmployeeViewController.swift in Sources */,
 				04A028E621AF09EB0046F798 /* CoreTasksViewModel.swift in Sources */,
 				04A028E421AF08090046F798 /* Task.swift in Sources */,
 				04096BF721B19B4D002DDD08 /* EmployeeTableViewCell.swift in Sources */,
@@ -217,6 +224,7 @@
 				04F7EC1121AB192A00E3C0D0 /* TasksViewController.swift in Sources */,
 				04F7EC0F21AB192A00E3C0D0 /* AppDelegate.swift in Sources */,
 				04096BF321B15758002DDD08 /* EnteringViewController.swift in Sources */,
+				04096C1721B2C79B002DDD08 /* AddEmloyeeInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
