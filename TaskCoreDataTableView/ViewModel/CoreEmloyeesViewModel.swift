@@ -9,8 +9,8 @@
 import UIKit
 import CoreData
 
-class CoreUsersViewModel {
-    public var users:[User] = []
+class CoreEmloyeesViewModel {
+    public var employees:[Employee] = []
     let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     
     func addUser(){

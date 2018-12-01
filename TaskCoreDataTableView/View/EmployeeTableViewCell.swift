@@ -15,9 +15,18 @@ class EmployeeTableViewCell: UITableViewCell {
     @IBOutlet weak var totalTasks: UILabel!
     
     
-    func configureCell(user:User){
+    func configureCell(employee:Employee){
         
-        self.personalInfo.text = "\(user.name) \(user.surname) \n \(user.position)"
+        guard let employeeName = employee.name  else {
+            return
+        }
+        guard let employeeSurename = employee.surname  else {
+            return
+        }
+        guard let employeePosition = employee.position  else {
+            return
+        }
+        self.personalInfo.text = "  \(employeeName) \(employeeSurename) \n \(employeePosition)"
         
         if let image = UIImage(named: "default-user") {
             self.profileImage.image = image

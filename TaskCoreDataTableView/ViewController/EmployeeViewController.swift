@@ -10,7 +10,7 @@ import UIKit
 
 class EmployeeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let coreUserViewModel = CoreUsersViewModel()
+    let coreEmloyeesViewModel = CoreEmloyeesViewModel()
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,13 +18,19 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
+    
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.reloadData()
+    }
+    
     @IBAction func addBtnWasPressed(_ sender: Any) {
         
         let addEmployee = AddEmloyeeInfoVC()
-        addEmployee.modalPresentationStyle = .custom
-        addEmployee.coreUserViewModel = self.coreUserViewModel
+        addEmployee.coreUserViewModel = self.coreEmloyeesViewModel
+        addEmployee.modalPresentationStyle = .fullScreen
         present(addEmployee, animated: true, completion: nil)
     }
     
@@ -37,25 +43,19 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return coreUserViewModel.users.count
+        return coreEmloyeesViewModel.employees.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "employeeTableViewCell") as? EmployeeTableViewCell else {
             fatalError("The dequeued cell is not an instance of TaskTableViewCell.")
         }
-        let employee = coreUserViewModel.users[indexPath.row]
+        let employee = coreEmloyeesViewModel.employees[indexPath.row]
         
-        cell.configureCell(user: employee)
+        cell.configureCell(employee: employee)
         
         
         return cell
-    }
-    
-    
-    
-    func addEmloyee(profileImg:UIImage,userInfo:String){
-        
     }
     
     

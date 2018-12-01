@@ -9,7 +9,9 @@
 import UIKit
 
 class AddEmloyeeInfoVC: UIViewController {
-    
+    var coreUserViewModel:CoreEmloyeesViewModel!
+    let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
+   
     
     var defaulPhoto = UIImage(named: "default-user")
     @IBOutlet weak var profileImgView: UIImageView!
@@ -17,18 +19,25 @@ class AddEmloyeeInfoVC: UIViewController {
     @IBOutlet weak var surenameTxtFld: UITextField!
     @IBOutlet weak var positionTxtFld: UITextField!
     
-    var coreUserViewModel:CoreUsersViewModel!
+ 
+   // var delegate:AddEmployeeInfoVCDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
     @IBAction func doneBntWasPressed(_ sender: UIButton) {
-        let user = self.getUserFromTextFields()
-        //
+        let employee = self.getUserFromTextFields()
+        
+        if let employee = employee {
+            appendEmployee(employee: employee)
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            // show alert to user thtat something went wrong
+            //self.errorLabel.text = "This field can not be empty"
+        }
+     
+        
     }
     
     @IBAction func backButtonWasPressed(_ sender: UIButton) {
@@ -36,23 +45,30 @@ class AddEmloyeeInfoVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    func getUserFromTextFields()->User {
-        let firstname = self.firstNameTxtFld.text!
+    func getUserFromTextFields() -> Employee? {
+        guard let firstName = self.firstNameTxtFld.text else {
+            return nil
+        }
+        guard let surename = self.surenameTxtFld.text else {
+            return nil
+        }
+        guard let position = self.positionTxtFld.text else {
+            return nil
+        }
+
+        let manegedContext = container?.viewContext
+        let employeeObject = Employee(context: manegedContext!)
         
+        employeeObject.name = firstName
+        employeeObject.surname = surename
+        employeeObject.position = position
+        return employeeObject
         //create object User using managedContext (check how Task object is created)
     }
     
-    func addNewEmloyee(firstName:String,surename:String,position:String,imageProfile:UIImage){
-        //self.firstNameTxtFld.text = firstName
-        self.surenameTxtFld.text = surename
-        self.positionTxtFld.text = position
-        if self.profileImgView.image != nil{
-            self.profileImgView.image = imageProfile
-        }else{
-            self.defaulPhoto = imageProfile
-        }
-        
-        
+    func appendEmployee(employee:Employee){
+        coreUserViewModel.employees.append(employee)
     }
+    
     
 }

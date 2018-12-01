@@ -18,3 +18,7 @@ struct VIEW_CONTROLLERS_IDENTIFIRES {
     static let tasksVC = "tasksViewController"
 }
 
+struct NOTIFICATIONS {
+    static let NOTIF_ADDED_EMPLOYEE  = NSNotification.Name("EmployeeAdded")
+}
+
