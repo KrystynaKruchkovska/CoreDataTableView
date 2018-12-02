@@ -77,8 +77,6 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.reloadData()
         
     }
-
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -97,6 +95,10 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.configureCell(task: task, taskNum: taskNumber)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
 
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
@@ -106,6 +108,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             })
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+        
         
         deleteAction.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
         return [deleteAction]

@@ -11,25 +11,28 @@ import UIKit
 class EmployeeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let coreEmloyeesViewModel = CoreEmloyeesViewModel()
-
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-    
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.tableView.reloadData()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        coreEmloyeesViewModel.fetchEmpoyees { (success) in
+            self.tableView.reloadData()
+        }
     }
     
     @IBAction func addBtnWasPressed(_ sender: Any) {
         
         let addEmployee = AddEmloyeeInfoVC()
-        addEmployee.coreUserViewModel = self.coreEmloyeesViewModel
+        addEmployee.coreEmloyeesViewModel = self.coreEmloyeesViewModel
         addEmployee.modalPresentationStyle = .fullScreen
         present(addEmployee, animated: true, completion: nil)
     }
@@ -56,6 +59,20 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
         
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
+            
+            self.coreEmloyeesViewModel.removeEmployee(atIndexPath: indexPath)
+            self.coreEmloyeesViewModel.fetchEmpoyees(completion: { (success) in
+            })
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        
+        deleteAction.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+        return [deleteAction]
     }
     
     

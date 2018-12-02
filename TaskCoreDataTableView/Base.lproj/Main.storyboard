@@ -114,16 +114,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="zS8-u1-YaW">
-                                                            <rect key="frame" x="36" y="0.0" width="221" height="32"/>
+                                                            <rect key="frame" x="36" y="0.0" width="100.5" height="32"/>
                                                             <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIT-qh-cNb">
-                                                            <rect key="frame" x="263" y="0.0" width="50" height="32"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="50" id="71d-2n-5Be"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="142.5" y="0.0" width="170.5" height="32"/>
                                                             <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -178,6 +175,7 @@
                             <constraint firstItem="SOi-eU-jPD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="LId-uO-WQB"/>
                             <constraint firstItem="IiW-24-aYt" firstAttribute="leading" secondItem="SOi-eU-jPD" secondAttribute="trailing" constant="16" id="NvK-5p-FMK"/>
                             <constraint firstItem="cNL-Qc-dI6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Rjb-a2-5G9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HR3-CJ-6fu" secondAttribute="trailing" symbolic="YES" id="S1h-dL-sku"/>
                             <constraint firstItem="2Fa-FO-fqT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="T0r-gJ-aKY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IiW-24-aYt" secondAttribute="trailing" constant="16" id="bHx-5m-gMZ"/>
                             <constraint firstItem="HR3-CJ-6fu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="f1f-Q6-8zU"/>

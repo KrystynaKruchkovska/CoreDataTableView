@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class CoreTasksModelView {
+class CoreTasksModelView:CoreViewModelProtocol {
     
     public var tasks:[Task] = []
     let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
@@ -24,13 +24,19 @@ class CoreTasksModelView {
     
     func appendTask(task:Task){
         tasks.append(task)
+        
+        guard let manegedContext = container?.viewContext else {
+            return
+        }
+        saveManegedContext(manegedContext: manegedContext)
     }
     
     func fetchTasks( completion:(_ complete:Bool)->() ){
         guard  let manegedContext = container?.viewContext else {
             return
         }
-        let fetchRequest = NSFetchRequest<Task>(entityName: "Task")
+        let className = String(describing: Task.self)
+        let fetchRequest = NSFetchRequest<Task>(entityName: className)
         do{
             self.tasks = try manegedContext.fetch(fetchRequest)
             print("Successflly fetch data")
@@ -42,18 +48,10 @@ class CoreTasksModelView {
     }
     
     func removeTask(atIndexPath indexPath: IndexPath) {
-        guard let manegedContext = container?.viewContext else {
-            return
-        }
+      self.removeManegedObject(atIndexPath: indexPath, manegedContext: container?.viewContext, managedObjectsArray: self.tasks)
         
-        manegedContext.delete(tasks[indexPath.row])
-        
-        do{
-            try manegedContext.save()
-            print("Successflly remove data")
-        }catch{
-            debugPrint("Could not remove\(error.localizedDescription)")
-        }
     }
+    
+
 
 }
