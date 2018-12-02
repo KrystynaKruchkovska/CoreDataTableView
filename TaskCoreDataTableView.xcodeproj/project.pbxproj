@@ -15,10 +15,14 @@
 		04096C1721B2C79B002DDD08 /* AddEmloyeeInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04096C1521B2C79B002DDD08 /* AddEmloyeeInfoVC.swift */; };
 		04096C1821B2C79B002DDD08 /* AddEmloyeeInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04096C1621B2C79B002DDD08 /* AddEmloyeeInfoVC.xib */; };
 		043D41F821B40247007A6247 /* CoreViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D41F721B40247007A6247 /* CoreViewModelProtocol.swift */; };
+		043D41FA21B41B2D007A6247 /* ListOfEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D41F921B41B2D007A6247 /* ListOfEmployeeViewController.swift */; };
+		043D41FC21B425C4007A6247 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D41FB21B425C4007A6247 /* RoundedButton.swift */; };
 		04A028E221AF050C0046F798 /* Tasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04A028E021AF050C0046F798 /* Tasks.xcdatamodeld */; };
 		04A028E421AF08090046F798 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A028E321AF08090046F798 /* Task.swift */; };
 		04A028E621AF09EB0046F798 /* CoreTasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A028E521AF09EB0046F798 /* CoreTasksViewModel.swift */; };
 		04A028E921AF2ECF0046F798 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A028E821AF2ECF0046F798 /* Constants.swift */; };
+		04D88E9F21B429E900729F5D /* RoundedImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D88E9E21B429E800729F5D /* RoundedImg.swift */; };
+		04D88EA121B42A4300729F5D /* ListOfEmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D88EA021B42A4300729F5D /* ListOfEmployeeTableViewCell.swift */; };
 		04F7EC0F21AB192A00E3C0D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7EC0E21AB192A00E3C0D0 /* AppDelegate.swift */; };
 		04F7EC1121AB192A00E3C0D0 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7EC1021AB192A00E3C0D0 /* TasksViewController.swift */; };
 		04F7EC1421AB192A00E3C0D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F7EC1221AB192A00E3C0D0 /* Main.storyboard */; };
@@ -38,10 +42,14 @@
 		04096C1521B2C79B002DDD08 /* AddEmloyeeInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmloyeeInfoVC.swift; sourceTree = "<group>"; };
 		04096C1621B2C79B002DDD08 /* AddEmloyeeInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddEmloyeeInfoVC.xib; sourceTree = "<group>"; };
 		043D41F721B40247007A6247 /* CoreViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreViewModelProtocol.swift; sourceTree = "<group>"; };
+		043D41F921B41B2D007A6247 /* ListOfEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfEmployeeViewController.swift; sourceTree = "<group>"; };
+		043D41FB21B425C4007A6247 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		04A028E121AF050C0046F798 /* Tasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tasks.xcdatamodel; sourceTree = "<group>"; };
 		04A028E321AF08090046F798 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		04A028E521AF09EB0046F798 /* CoreTasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTasksViewModel.swift; sourceTree = "<group>"; };
 		04A028E821AF2ECF0046F798 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		04D88E9E21B429E800729F5D /* RoundedImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImg.swift; sourceTree = "<group>"; };
+		04D88EA021B42A4300729F5D /* ListOfEmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfEmployeeTableViewCell.swift; sourceTree = "<group>"; };
 		04F7EC0B21AB192A00E3C0D0 /* TaskCoreDataTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskCoreDataTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F7EC0E21AB192A00E3C0D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F7EC1021AB192A00E3C0D0 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +81,7 @@
 				04F7EC1021AB192A00E3C0D0 /* TasksViewController.swift */,
 				04096BF421B15DEB002DDD08 /* EmployeeViewController.swift */,
 				04096C1521B2C79B002DDD08 /* AddEmloyeeInfoVC.swift */,
+				043D41F921B41B2D007A6247 /* ListOfEmployeeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -92,6 +101,9 @@
 			children = (
 				04F7EC2021AB21F900E3C0D0 /* TasksTableViewCell.swift */,
 				04096BF621B19B4D002DDD08 /* EmployeeTableViewCell.swift */,
+				043D41FB21B425C4007A6247 /* RoundedButton.swift */,
+				04D88E9E21B429E800729F5D /* RoundedImg.swift */,
+				04D88EA021B42A4300729F5D /* ListOfEmployeeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,7 +304,10 @@
 				04F7EC2121AB21F900E3C0D0 /* TasksTableViewCell.swift in Sources */,
 				04096BE121B146AE002DDD08 /* CoreEmloyeesViewModel.swift in Sources */,
 				04096BF521B15DEB002DDD08 /* EmployeeViewController.swift in Sources */,
+				04D88EA121B42A4300729F5D /* ListOfEmployeeTableViewCell.swift in Sources */,
 				04A028E621AF09EB0046F798 /* CoreTasksViewModel.swift in Sources */,
+				043D41FA21B41B2D007A6247 /* ListOfEmployeeViewController.swift in Sources */,
+				04D88E9F21B429E900729F5D /* RoundedImg.swift in Sources */,
 				04A028E421AF08090046F798 /* Task.swift in Sources */,
 				04096BF721B19B4D002DDD08 /* EmployeeTableViewCell.swift in Sources */,
 				043D41F821B40247007A6247 /* CoreViewModelProtocol.swift in Sources */,
@@ -300,6 +315,7 @@
 				04096BFA21B2AE59002DDD08 /* Employee.swift in Sources */,
 				04F7EC1121AB192A00E3C0D0 /* TasksViewController.swift in Sources */,
 				04F7EC0F21AB192A00E3C0D0 /* AppDelegate.swift in Sources */,
+				043D41FC21B425C4007A6247 /* RoundedButton.swift in Sources */,
 				04096BF321B15758002DDD08 /* EnteringViewController.swift in Sources */,
 				04096C1721B2C79B002DDD08 /* AddEmloyeeInfoVC.swift in Sources */,
 			);

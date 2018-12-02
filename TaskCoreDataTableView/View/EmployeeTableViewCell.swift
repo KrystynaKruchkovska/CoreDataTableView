@@ -26,7 +26,7 @@ class EmployeeTableViewCell: UITableViewCell {
         guard let employeePosition = employee.position  else {
             return
         }
-        self.personalInfo.text = "  \(employeeName) \(employeeSurename) \n \(employeePosition)"
+        self.personalInfo.text = "\(employeeName) \(employeeSurename) \n\(employeePosition)"
         
         if let image = UIImage(named: "default-user") {
             self.profileImage.image = image
