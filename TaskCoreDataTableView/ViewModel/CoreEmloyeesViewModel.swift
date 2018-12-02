@@ -10,10 +10,8 @@ import UIKit
 import CoreData
 
 class CoreEmloyeesViewModel: CoreViewModelProtocol {
-  
-    
-    
-    public var employees:[Employee] = []
+
+    public private(set) var employees:[Employee] = []
     let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     
     func appendEmployee(employee:Employee){

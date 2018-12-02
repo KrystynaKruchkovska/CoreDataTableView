@@ -12,11 +12,11 @@ import CoreData
 class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     let tasksViewModel = CoreTasksModelView()
+    var coreEmployeesViewModel:CoreEmloyeesViewModel!
    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var motivationLable: UILabel!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,6 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.dataSource = self
         self.tableView.layer.cornerRadius = 20
     }
-    
     
     @IBAction func backButtonWasPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
@@ -95,9 +94,15 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.configureCell(task: task, taskNum: taskNumber)
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "toListOfEmployee", sender: indexPath)
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let selectedRow = indexPath.row
+            let singleTaskViewController = segue.destination as! ListOfEmployeeViewController
+            singleTaskViewController.task = self.tasksViewModel.tasks[selectedRow]
+            singleTaskViewController.coreEmloyeesViewModel = self.coreEmployeesViewModel
+        }
+        print("prepare for segue")
     }
 
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {

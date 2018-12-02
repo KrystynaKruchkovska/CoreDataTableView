@@ -40,7 +40,6 @@ class AddEmloyeeInfoVC: UIViewController {
     }
     
     @IBAction func backButtonWasPressed(_ sender: UIButton) {
-        
         dismiss(animated: true, completion: nil)
     }
     

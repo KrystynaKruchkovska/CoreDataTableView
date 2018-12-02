@@ -10,8 +10,12 @@ import UIKit
 
 class EnteringViewController: UIViewController {
     
+    private let coreEmloyeesViewModel = CoreEmloyeesViewModel()
+    
     @IBOutlet weak var taskList: UILabel!
     @IBOutlet weak var empoyeeList: UILabel!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +34,11 @@ class EnteringViewController: UIViewController {
     @objc func tapFunctionforTasks(sender:UITapGestureRecognizer) {
         if let vc = UIStoryboard(name:CONSTANTS.main, bundle: nil).instantiateViewController(withIdentifier: VIEW_CONTROLLERS_IDENTIFIRES.tasksVC) as? TasksViewController
         {
+            vc.coreEmployeesViewModel = self.coreEmloyeesViewModel
             present(vc, animated: true, completion: nil)
         }
     }
+    
     @objc func tapFunctionforEmployee(sender:UITapGestureRecognizer) {
         if let vc = UIStoryboard(name: CONSTANTS.main, bundle: nil).instantiateViewController(withIdentifier: VIEW_CONTROLLERS_IDENTIFIRES.employeeVC) as? EmployeeViewController
         {

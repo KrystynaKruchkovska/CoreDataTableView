@@ -10,7 +10,7 @@ import UIKit
 
 class EmployeeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let coreEmloyeesViewModel = CoreEmloyeesViewModel()
+    var coreEmloyeesViewModel:CoreEmloyeesViewModel!
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -56,7 +56,6 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
         let employee = coreEmloyeesViewModel.employees[indexPath.row]
         
         cell.configureCell(employee: employee)
-        
         
         return cell
     }

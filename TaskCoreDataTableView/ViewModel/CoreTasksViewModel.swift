@@ -11,7 +11,7 @@ import CoreData
 
 class CoreTasksModelView:CoreViewModelProtocol {
     
-    public var tasks:[Task] = []
+    public private(set) var tasks:[Task] = []
     let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     
     func addTask (textFieldText:String, priorityLevel:String){
