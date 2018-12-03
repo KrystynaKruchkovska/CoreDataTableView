@@ -98,7 +98,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow {
             let selectedRow = indexPath.row
-            let singleTaskViewController = segue.destination as! ListOfEmployeeViewController
+            let singleTaskViewController = segue.destination as! TaskDetailsViewController
             singleTaskViewController.task = self.tasksViewModel.tasks[selectedRow]
             singleTaskViewController.coreEmloyeesViewModel = self.coreEmployeesViewModel
         }

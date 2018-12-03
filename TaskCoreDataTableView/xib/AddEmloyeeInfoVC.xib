@@ -25,19 +25,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wtk-Ma-An5">
-                    <rect key="frame" x="16" y="140" width="344" height="337"/>
+                    <rect key="frame" x="16" y="140" width="343" height="337"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new employee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H90-iX-XN5">
-                            <rect key="frame" x="95" y="16" width="154.5" height="23.5"/>
+                            <rect key="frame" x="94.5" y="16" width="154.5" height="23.5"/>
                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                             <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cq2-Qg-PMO">
-                            <rect key="frame" x="47" y="131.5" width="250" height="125.5"/>
+                            <rect key="frame" x="47" y="131.5" width="249" height="125.5"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="hCa-sk-fao">
-                                    <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="249" height="30"/>
                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="H2g-Gz-3au"/>
@@ -48,14 +48,14 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8Y-ob-4ft">
-                                    <rect key="frame" x="0.0" y="34" width="250" height="5"/>
+                                    <rect key="frame" x="0.0" y="34" width="249" height="5"/>
                                     <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="5" id="Fbf-Pj-q8p"/>
                                     </constraints>
                                 </view>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SureName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Taq-Ib-ibh">
-                                    <rect key="frame" x="0.0" y="43" width="250" height="30"/>
+                                    <rect key="frame" x="0.0" y="43" width="249" height="30"/>
                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="250" id="0Uy-nG-ejH"/>
@@ -66,14 +66,14 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLZ-5s-OtO">
-                                    <rect key="frame" x="0.0" y="77" width="250" height="5"/>
+                                    <rect key="frame" x="0.0" y="77" width="249" height="5"/>
                                     <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="5" id="UdV-Wv-coo"/>
                                     </constraints>
                                 </view>
                                 <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Position" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HxN-Bc-WKi">
-                                    <rect key="frame" x="0.0" y="86" width="250" height="30.5"/>
+                                    <rect key="frame" x="0.0" y="86" width="249" height="30.5"/>
                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="250" id="5ma-Xm-3hw"/>
@@ -84,7 +84,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wsm-Ce-o2A">
-                                    <rect key="frame" x="0.0" y="120.5" width="250" height="5"/>
+                                    <rect key="frame" x="0.0" y="120.5" width="249" height="5"/>
                                     <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="5" id="2Ka-0U-LIl"/>
@@ -96,14 +96,14 @@
                             </constraints>
                         </stackView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EiQ-03-Phl">
-                            <rect key="frame" x="142" y="55.5" width="60" height="60"/>
+                            <rect key="frame" x="141.5" y="55.5" width="60" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="WPZ-KO-xLS"/>
                                 <constraint firstAttribute="height" constant="60" id="eck-1R-BYD"/>
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjB-p4-5bc">
-                            <rect key="frame" x="151.5" y="281" width="41" height="32"/>
+                            <rect key="frame" x="151" y="281" width="41" height="32"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="32" id="G5O-H4-hRZ"/>
                                 <constraint firstAttribute="width" constant="41" id="IMK-EU-xha"/>

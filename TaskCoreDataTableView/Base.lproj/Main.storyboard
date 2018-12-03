@@ -114,13 +114,16 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="zS8-u1-YaW">
-                                                            <rect key="frame" x="36" y="0.0" width="100.5" height="32"/>
+                                                            <rect key="frame" x="36" y="0.0" width="239" height="32"/>
                                                             <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIT-qh-cNb">
-                                                            <rect key="frame" x="142.5" y="0.0" width="170.5" height="32"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIT-qh-cNb">
+                                                            <rect key="frame" x="281" y="0.0" width="32" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="32" id="ISa-GE-wID"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -329,10 +332,10 @@
             </objects>
             <point key="canvasLocation" x="397.60000000000002" y="627.4362818590705"/>
         </scene>
-        <!--List Of Employee View Controller-->
+        <!--Task Details View Controller-->
         <scene sceneID="MvI-7j-cPA">
             <objects>
-                <viewController id="blZ-Gp-WdQ" customClass="ListOfEmployeeViewController" customModule="TaskCoreDataTableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="blZ-Gp-WdQ" customClass="TaskDetailsViewController" customModule="TaskCoreDataTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yge-Av-JI0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,7 +344,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="166"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comunicacion-departamento" translatesAutoresizingMaskIntoConstraints="NO" id="rhy-kC-qtA">
-                                        <rect key="frame" x="118" y="23" width="138" height="115"/>
+                                        <rect key="frame" x="118.5" y="23" width="138" height="115"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="138" id="YLD-fS-HAr"/>
                                         </constraints>
@@ -374,7 +377,7 @@
                                     <constraint firstAttribute="height" constant="481" id="gb4-PI-PYg"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tasksTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="employeeTableViewCell" rowHeight="90" id="wFP-bf-tkj" customClass="ListOfEmployeeTableViewCell" customModule="TaskCoreDataTableView" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tasksTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listOfEmployeeTableViewCell" rowHeight="90" id="wFP-bf-tkj" customClass="ListOfEmployeeTableViewCell" customModule="TaskCoreDataTableView" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wFP-bf-tkj" id="Vlz-Lv-4qt">

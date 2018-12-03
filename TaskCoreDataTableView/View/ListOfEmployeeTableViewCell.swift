@@ -13,9 +13,25 @@ class ListOfEmployeeTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImg: UIImageView!
     
     @IBOutlet weak var employeeInfo: UILabel!
- 
- 
     
+    func configureCell(employee:Employee){
+        
+        guard let employeeName = employee.name  else {
+            return
+        }
+        guard let employeeSurename = employee.surname  else {
+            return
+        }
+        guard let employeePosition = employee.position  else {
+            return
+        }
+
+        if let image = UIImage(named: "default-user") {
+            self.profileImg.image = image
+        }
+        self.employeeInfo.text = "\(employeeName) \(employeeSurename) \n\(employeePosition)"
+    }
+ 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

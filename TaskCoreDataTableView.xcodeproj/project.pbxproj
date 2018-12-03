@@ -15,7 +15,7 @@
 		04096C1721B2C79B002DDD08 /* AddEmloyeeInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04096C1521B2C79B002DDD08 /* AddEmloyeeInfoVC.swift */; };
 		04096C1821B2C79B002DDD08 /* AddEmloyeeInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04096C1621B2C79B002DDD08 /* AddEmloyeeInfoVC.xib */; };
 		043D41F821B40247007A6247 /* CoreViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D41F721B40247007A6247 /* CoreViewModelProtocol.swift */; };
-		043D41FA21B41B2D007A6247 /* ListOfEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D41F921B41B2D007A6247 /* ListOfEmployeeViewController.swift */; };
+		043D41FA21B41B2D007A6247 /* TaskDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D41F921B41B2D007A6247 /* TaskDetailsViewController.swift */; };
 		043D41FC21B425C4007A6247 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D41FB21B425C4007A6247 /* RoundedButton.swift */; };
 		04A028E221AF050C0046F798 /* Tasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04A028E021AF050C0046F798 /* Tasks.xcdatamodeld */; };
 		04A028E421AF08090046F798 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A028E321AF08090046F798 /* Task.swift */; };
@@ -42,7 +42,7 @@
 		04096C1521B2C79B002DDD08 /* AddEmloyeeInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmloyeeInfoVC.swift; sourceTree = "<group>"; };
 		04096C1621B2C79B002DDD08 /* AddEmloyeeInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddEmloyeeInfoVC.xib; sourceTree = "<group>"; };
 		043D41F721B40247007A6247 /* CoreViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreViewModelProtocol.swift; sourceTree = "<group>"; };
-		043D41F921B41B2D007A6247 /* ListOfEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfEmployeeViewController.swift; sourceTree = "<group>"; };
+		043D41F921B41B2D007A6247 /* TaskDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsViewController.swift; sourceTree = "<group>"; };
 		043D41FB21B425C4007A6247 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		04A028E121AF050C0046F798 /* Tasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tasks.xcdatamodel; sourceTree = "<group>"; };
 		04A028E321AF08090046F798 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 				04F7EC1021AB192A00E3C0D0 /* TasksViewController.swift */,
 				04096BF421B15DEB002DDD08 /* EmployeeViewController.swift */,
 				04096C1521B2C79B002DDD08 /* AddEmloyeeInfoVC.swift */,
-				043D41F921B41B2D007A6247 /* ListOfEmployeeViewController.swift */,
+				043D41F921B41B2D007A6247 /* TaskDetailsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -128,7 +128,6 @@
 		04F7EC0221AB192A00E3C0D0 = {
 			isa = PBXGroup;
 			children = (
-				04096C1621B2C79B002DDD08 /* AddEmloyeeInfoVC.xib */,
 				04F7EC0D21AB192A00E3C0D0 /* TaskCoreDataTableView */,
 				04F7EC0C21AB192A00E3C0D0 /* Products */,
 				4372BDE7FA1C423B8729DF55 /* Pods */,
@@ -147,6 +146,7 @@
 		04F7EC0D21AB192A00E3C0D0 /* TaskCoreDataTableView */ = {
 			isa = PBXGroup;
 			children = (
+				04FA9C8E21B5B6B6001E02D4 /* xib */,
 				04096BF821B2AE18002DDD08 /* Model */,
 				04096BDF21B1454C002DDD08 /* View */,
 				04096BDE21B14534002DDD08 /* ViewModel */,
@@ -160,6 +160,14 @@
 				04F7EC1A21AB193200E3C0D0 /* Info.plist */,
 			);
 			path = TaskCoreDataTableView;
+			sourceTree = "<group>";
+		};
+		04FA9C8E21B5B6B6001E02D4 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				04096C1621B2C79B002DDD08 /* AddEmloyeeInfoVC.xib */,
+			);
+			path = xib;
 			sourceTree = "<group>";
 		};
 		4372BDE7FA1C423B8729DF55 /* Pods */ = {
@@ -306,7 +314,7 @@
 				04096BF521B15DEB002DDD08 /* EmployeeViewController.swift in Sources */,
 				04D88EA121B42A4300729F5D /* ListOfEmployeeTableViewCell.swift in Sources */,
 				04A028E621AF09EB0046F798 /* CoreTasksViewModel.swift in Sources */,
-				043D41FA21B41B2D007A6247 /* ListOfEmployeeViewController.swift in Sources */,
+				043D41FA21B41B2D007A6247 /* TaskDetailsViewController.swift in Sources */,
 				04D88E9F21B429E900729F5D /* RoundedImg.swift in Sources */,
 				04A028E421AF08090046F798 /* Task.swift in Sources */,
 				04096BF721B19B4D002DDD08 /* EmployeeTableViewCell.swift in Sources */,

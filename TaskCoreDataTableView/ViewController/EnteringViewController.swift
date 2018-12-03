@@ -41,7 +41,7 @@ class EnteringViewController: UIViewController {
     
     @objc func tapFunctionforEmployee(sender:UITapGestureRecognizer) {
         if let vc = UIStoryboard(name: CONSTANTS.main, bundle: nil).instantiateViewController(withIdentifier: VIEW_CONTROLLERS_IDENTIFIRES.employeeVC) as? EmployeeViewController
-        {
+        {   vc.coreEmloyeesViewModel = self.coreEmloyeesViewModel
             present(vc, animated: true, completion: nil)
         }
     }

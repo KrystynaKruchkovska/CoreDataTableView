@@ -9,14 +9,10 @@
 import UIKit
 import CoreData
 
-class ListOfEmployeeViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
-    
     var task:Task!
-
     var coreEmloyeesViewModel:CoreEmloyeesViewModel!
-    var coreEmpyeesArray:[Employee]!
-    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,9 +20,13 @@ class ListOfEmployeeViewController: UIViewController,UITableViewDelegate, UITabl
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
-        // self.task.emloyee = coreEmloyeesViewModel.employees[5]
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        coreEmloyeesViewModel.fetchEmpoyees { (success) in
+            self.tableView.reloadData()
+        }
     }
     
     @IBAction func backButtonWasPressed(_ sender: UIButton) {
@@ -38,11 +38,19 @@ class ListOfEmployeeViewController: UIViewController,UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return coreEmloyeesViewModel.employees.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard  let cell = tableView.dequeueReusableCell(withIdentifier: "listOfEmployeeTableViewCell") as? ListOfEmployeeTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        let employee = self.coreEmloyeesViewModel.employees[indexPath.row]
+        cell.configureCell(employee: employee)
+        
+        return cell
+   
     }
     
 }
