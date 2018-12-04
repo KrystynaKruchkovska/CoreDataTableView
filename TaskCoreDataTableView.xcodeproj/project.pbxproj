@@ -22,7 +22,11 @@
 		04A028E621AF09EB0046F798 /* CoreTasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A028E521AF09EB0046F798 /* CoreTasksViewModel.swift */; };
 		04A028E921AF2ECF0046F798 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A028E821AF2ECF0046F798 /* Constants.swift */; };
 		04D88E9F21B429E900729F5D /* RoundedImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D88E9E21B429E800729F5D /* RoundedImg.swift */; };
-		04D88EA121B42A4300729F5D /* ListOfEmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D88EA021B42A4300729F5D /* ListOfEmployeeTableViewCell.swift */; };
+		04D88EA121B42A4300729F5D /* TaskDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D88EA021B42A4300729F5D /* TaskDetailsTableViewCell.swift */; };
+		04F02E0421B6CB1500C9C2FC /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F02DFC21B6CB1400C9C2FC /* BEMAnimationManager.m */; };
+		04F02E0521B6CB1500C9C2FC /* BEMCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F02DFF21B6CB1500C9C2FC /* BEMCheckBox.m */; };
+		04F02E0621B6CB1500C9C2FC /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F02E0121B6CB1500C9C2FC /* BEMPathManager.m */; };
+		04F02E0721B6CB1500C9C2FC /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F02E0221B6CB1500C9C2FC /* BEMCheckBoxGroup.m */; };
 		04F7EC0F21AB192A00E3C0D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7EC0E21AB192A00E3C0D0 /* AppDelegate.swift */; };
 		04F7EC1121AB192A00E3C0D0 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7EC1021AB192A00E3C0D0 /* TasksViewController.swift */; };
 		04F7EC1421AB192A00E3C0D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F7EC1221AB192A00E3C0D0 /* Main.storyboard */; };
@@ -49,7 +53,16 @@
 		04A028E521AF09EB0046F798 /* CoreTasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTasksViewModel.swift; sourceTree = "<group>"; };
 		04A028E821AF2ECF0046F798 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04D88E9E21B429E800729F5D /* RoundedImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImg.swift; sourceTree = "<group>"; };
-		04D88EA021B42A4300729F5D /* ListOfEmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfEmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		04D88EA021B42A4300729F5D /* TaskDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		04F02DFA21B6C10700C9C2FC /* CheckBox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CheckBox-Bridging-Header.h"; sourceTree = "<group>"; };
+		04F02DFC21B6CB1400C9C2FC /* BEMAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMAnimationManager.m; sourceTree = "<group>"; };
+		04F02DFD21B6CB1400C9C2FC /* BEMCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCheckBox.h; sourceTree = "<group>"; };
+		04F02DFE21B6CB1500C9C2FC /* BEMAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMAnimationManager.h; sourceTree = "<group>"; };
+		04F02DFF21B6CB1500C9C2FC /* BEMCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCheckBox.m; sourceTree = "<group>"; };
+		04F02E0021B6CB1500C9C2FC /* BEMPathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMPathManager.h; sourceTree = "<group>"; };
+		04F02E0121B6CB1500C9C2FC /* BEMPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMPathManager.m; sourceTree = "<group>"; };
+		04F02E0221B6CB1500C9C2FC /* BEMCheckBoxGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCheckBoxGroup.m; sourceTree = "<group>"; };
+		04F02E0321B6CB1500C9C2FC /* BEMCheckBoxGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCheckBoxGroup.h; sourceTree = "<group>"; };
 		04F7EC0B21AB192A00E3C0D0 /* TaskCoreDataTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskCoreDataTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F7EC0E21AB192A00E3C0D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F7EC1021AB192A00E3C0D0 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
@@ -103,7 +116,7 @@
 				04096BF621B19B4D002DDD08 /* EmployeeTableViewCell.swift */,
 				043D41FB21B425C4007A6247 /* RoundedButton.swift */,
 				04D88E9E21B429E800729F5D /* RoundedImg.swift */,
-				04D88EA021B42A4300729F5D /* ListOfEmployeeTableViewCell.swift */,
+				04D88EA021B42A4300729F5D /* TaskDetailsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,10 +138,26 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		04F02DFB21B6CAC700C9C2FC /* SupoortingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				04F02DFE21B6CB1500C9C2FC /* BEMAnimationManager.h */,
+				04F02DFC21B6CB1400C9C2FC /* BEMAnimationManager.m */,
+				04F02DFD21B6CB1400C9C2FC /* BEMCheckBox.h */,
+				04F02DFF21B6CB1500C9C2FC /* BEMCheckBox.m */,
+				04F02E0321B6CB1500C9C2FC /* BEMCheckBoxGroup.h */,
+				04F02E0221B6CB1500C9C2FC /* BEMCheckBoxGroup.m */,
+				04F02E0021B6CB1500C9C2FC /* BEMPathManager.h */,
+				04F02E0121B6CB1500C9C2FC /* BEMPathManager.m */,
+			);
+			path = SupoortingFiles;
+			sourceTree = "<group>";
+		};
 		04F7EC0221AB192A00E3C0D0 = {
 			isa = PBXGroup;
 			children = (
 				04F7EC0D21AB192A00E3C0D0 /* TaskCoreDataTableView */,
+				04F02DFB21B6CAC700C9C2FC /* SupoortingFiles */,
 				04F7EC0C21AB192A00E3C0D0 /* Products */,
 				4372BDE7FA1C423B8729DF55 /* Pods */,
 				78CA94E26A3708EA305CFA4E /* Frameworks */,
@@ -155,6 +184,7 @@
 				04F7EC0E21AB192A00E3C0D0 /* AppDelegate.swift */,
 				04A028E021AF050C0046F798 /* Tasks.xcdatamodeld */,
 				04F7EC1221AB192A00E3C0D0 /* Main.storyboard */,
+				04F02DFA21B6C10700C9C2FC /* CheckBox-Bridging-Header.h */,
 				04F7EC1521AB193200E3C0D0 /* Assets.xcassets */,
 				04F7EC1721AB193200E3C0D0 /* LaunchScreen.storyboard */,
 				04F7EC1A21AB193200E3C0D0 /* Info.plist */,
@@ -288,12 +318,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TaskCoreDataTableView/Pods-TaskCoreDataTableView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,13 +344,16 @@
 				04F7EC2121AB21F900E3C0D0 /* TasksTableViewCell.swift in Sources */,
 				04096BE121B146AE002DDD08 /* CoreEmloyeesViewModel.swift in Sources */,
 				04096BF521B15DEB002DDD08 /* EmployeeViewController.swift in Sources */,
-				04D88EA121B42A4300729F5D /* ListOfEmployeeTableViewCell.swift in Sources */,
+				04D88EA121B42A4300729F5D /* TaskDetailsTableViewCell.swift in Sources */,
+				04F02E0421B6CB1500C9C2FC /* BEMAnimationManager.m in Sources */,
 				04A028E621AF09EB0046F798 /* CoreTasksViewModel.swift in Sources */,
+				04F02E0621B6CB1500C9C2FC /* BEMPathManager.m in Sources */,
 				043D41FA21B41B2D007A6247 /* TaskDetailsViewController.swift in Sources */,
 				04D88E9F21B429E900729F5D /* RoundedImg.swift in Sources */,
 				04A028E421AF08090046F798 /* Task.swift in Sources */,
 				04096BF721B19B4D002DDD08 /* EmployeeTableViewCell.swift in Sources */,
 				043D41F821B40247007A6247 /* CoreViewModelProtocol.swift in Sources */,
+				04F02E0721B6CB1500C9C2FC /* BEMCheckBoxGroup.m in Sources */,
 				04A028E921AF2ECF0046F798 /* Constants.swift in Sources */,
 				04096BFA21B2AE59002DDD08 /* Employee.swift in Sources */,
 				04F7EC1121AB192A00E3C0D0 /* TasksViewController.swift in Sources */,
@@ -326,6 +361,7 @@
 				043D41FC21B425C4007A6247 /* RoundedButton.swift in Sources */,
 				04096BF321B15758002DDD08 /* EnteringViewController.swift in Sources */,
 				04096C1721B2C79B002DDD08 /* AddEmloyeeInfoVC.swift in Sources */,
+				04F02E0521B6CB1500C9C2FC /* BEMCheckBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V8ZG3WLBMM;
 				INFOPLIST_FILE = TaskCoreDataTableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,6 +519,8 @@
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KrystynaKruchkovska.TaskCoreDataTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "TaskCoreDataTableView/CheckBox-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -495,6 +534,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V8ZG3WLBMM;
 				INFOPLIST_FILE = TaskCoreDataTableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,6 +542,7 @@
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KrystynaKruchkovska.TaskCoreDataTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TaskCoreDataTableView/CheckBox-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

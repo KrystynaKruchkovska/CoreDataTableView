@@ -9,10 +9,12 @@
 import UIKit
 import CoreData
 
-class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+
+class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource,BEMCheckBoxDelegate {
 
     var task:Task!
     var coreEmloyeesViewModel:CoreEmloyeesViewModel!
+    var selectedIndex:IndexPath!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -42,15 +44,29 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard  let cell = tableView.dequeueReusableCell(withIdentifier: "listOfEmployeeTableViewCell") as? ListOfEmployeeTableViewCell else {
+        guard  let cell = tableView.dequeueReusableCell(withIdentifier: "listOfEmployeeTableViewCell") as? TaskDetailsTableViewCell else {
             return UITableViewCell()
         }
-        
+        let checkMark = BEMCheckBox()
+        checkMark.on = false
+       
         let employee = self.coreEmloyeesViewModel.employees[indexPath.row]
-        cell.configureCell(employee: employee)
+      
+        cell.configureCell(employee: employee,checkbox:checkMark)
         
         return cell
    
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let index = IndexPath(row: indexPath.row, section: 0)
+        let currentCell = tableView.cellForRow(at: index) as! TaskDetailsTableViewCell
+     
+    
+    
+    }
+    
+ 
+    
 }
+

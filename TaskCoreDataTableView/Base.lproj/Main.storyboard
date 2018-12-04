@@ -78,6 +78,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiW-24-aYt">
                                 <rect key="frame" x="324" y="62" width="35" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="Ptt-qG-abn"/>
                                     <constraint firstAttribute="height" constant="35" id="WBy-E4-7AZ"/>
@@ -300,7 +301,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhg-hu-dq3">
                                 <rect key="frame" x="87.5" y="83" width="200" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="WfB-DX-yYC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="WfB-DX-yYC"/>
                                     <constraint firstAttribute="height" constant="35" id="wQZ-vm-yCP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
@@ -312,13 +313,11 @@
                         <constraints>
                             <constraint firstItem="Vhg-hu-dq3" firstAttribute="top" secondItem="6Y3-QV-BnN" secondAttribute="top" constant="63" id="0NG-1b-YzV"/>
                             <constraint firstItem="6Y3-QV-BnN" firstAttribute="trailing" secondItem="Oew-vx-ToB" secondAttribute="trailing" constant="16" id="6au-p3-UGu"/>
-                            <constraint firstItem="Vhg-hu-dq3" firstAttribute="leading" secondItem="6Y3-QV-BnN" secondAttribute="leading" constant="87.5" id="ARL-x9-EUe"/>
                             <constraint firstItem="Yhl-SF-JSM" firstAttribute="leading" secondItem="ReY-vG-n5I" secondAttribute="leading" id="HxI-ml-JRg"/>
                             <constraint firstItem="CHq-WD-19C" firstAttribute="leading" secondItem="6Y3-QV-BnN" secondAttribute="leading" constant="16" id="INP-UN-pPY"/>
                             <constraint firstAttribute="trailing" secondItem="Yhl-SF-JSM" secondAttribute="trailing" id="J7X-N1-FoQ"/>
                             <constraint firstItem="Oew-vx-ToB" firstAttribute="firstBaseline" secondItem="CHq-WD-19C" secondAttribute="firstBaseline" id="Tof-Vc-Bi4"/>
                             <constraint firstItem="Yhl-SF-JSM" firstAttribute="top" secondItem="6Y3-QV-BnN" secondAttribute="top" constant="166" id="WLj-WZ-3RQ"/>
-                            <constraint firstItem="6Y3-QV-BnN" firstAttribute="trailing" secondItem="Vhg-hu-dq3" secondAttribute="trailing" constant="87.5" id="bcF-yy-qCE"/>
                             <constraint firstItem="CHq-WD-19C" firstAttribute="top" secondItem="ReY-vG-n5I" secondAttribute="top" constant="33" id="bdo-4r-eyX"/>
                             <constraint firstItem="Vhg-hu-dq3" firstAttribute="centerX" secondItem="ReY-vG-n5I" secondAttribute="centerX" id="tAe-th-y3E"/>
                         </constraints>
@@ -351,6 +350,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSO-yj-ZHJ">
                                         <rect key="frame" x="16" y="0.0" width="25" height="25"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="NuN-bU-zs2"/>
                                             <constraint firstAttribute="width" constant="25" id="rDa-gS-res"/>
@@ -377,7 +377,7 @@
                                     <constraint firstAttribute="height" constant="481" id="gb4-PI-PYg"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tasksTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listOfEmployeeTableViewCell" rowHeight="90" id="wFP-bf-tkj" customClass="ListOfEmployeeTableViewCell" customModule="TaskCoreDataTableView" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tasksTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listOfEmployeeTableViewCell" rowHeight="90" id="wFP-bf-tkj" customClass="TaskDetailsTableViewCell" customModule="TaskCoreDataTableView" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wFP-bf-tkj" id="Vlz-Lv-4qt">
@@ -400,33 +400,42 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VW1-5f-yU4">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBl-ia-j36" customClass="BEMCheckBox">
                                                             <rect key="frame" x="263" y="0.0" width="50" height="50"/>
-                                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="dl8-9u-ZcT"/>
-                                                                <constraint firstAttribute="width" constant="50" id="olg-19-4WA"/>
+                                                                <constraint firstAttribute="width" constant="50" id="7ZT-hT-b1l"/>
                                                             </constraints>
-                                                            <color key="tintColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal" image="check_mark">
-                                                                <color key="titleShadowColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </state>
                                                             <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                                    <real key="value" value="4"/>
+                                                                </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="15"/>
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="animationDuration">
+                                                                    <real key="value" value="0.5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="onTintColor">
+                                                                    <color key="value" red="0.96470588239999999" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="offFillColor">
+                                                                    <color key="value" red="0.11110176891088486" green="0.32544401288032532" blue="0.40172934532165527" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
-                                                            <connections>
-                                                                <action selector="checkMarkButtonWasPressed:" destination="wFP-bf-tkj" eventType="touchUpInside" id="JRq-zc-5Ph"/>
-                                                            </connections>
-                                                        </button>
+                                                        </view>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="tBl-ia-j36" firstAttribute="top" secondItem="lsY-gz-ymd" secondAttribute="top" id="5ja-dr-7ei"/>
+                                                        <constraint firstAttribute="trailing" secondItem="tBl-ia-j36" secondAttribute="trailing" id="AlS-HD-8H5"/>
+                                                        <constraint firstAttribute="bottom" secondItem="tBl-ia-j36" secondAttribute="bottom" id="GPP-NF-BpI"/>
                                                         <constraint firstItem="PYE-oK-yx0" firstAttribute="top" secondItem="lsY-gz-ymd" secondAttribute="top" id="GTV-Y5-YxH"/>
                                                         <constraint firstAttribute="bottom" secondItem="PYE-oK-yx0" secondAttribute="bottom" id="R5C-nv-FJW"/>
                                                         <constraint firstItem="PYE-oK-yx0" firstAttribute="leading" secondItem="lsY-gz-ymd" secondAttribute="leading" id="jqU-eQ-TVy"/>
                                                         <constraint firstItem="PYE-oK-yx0" firstAttribute="leading" secondItem="lsY-gz-ymd" secondAttribute="leading" id="oPS-ve-RdW"/>
-                                                        <constraint firstAttribute="trailing" secondItem="VW1-5f-yU4" secondAttribute="trailing" id="veX-Zj-de1"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
@@ -437,6 +446,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkbox" destination="tBl-ia-j36" id="5nu-Zh-pGd"/>
                                             <outlet property="employeeInfo" destination="vRO-GX-XJd" id="cBr-yy-Zsc"/>
                                             <outlet property="profileImg" destination="PYE-oK-yx0" id="TR1-Gt-GbI"/>
                                         </connections>
@@ -467,7 +477,6 @@
     </scenes>
     <resources>
         <image name="backIcon" width="12" height="22"/>
-        <image name="check_mark" width="256" height="256"/>
         <image name="comunicacion-departamento" width="524.4000244140625" height="525.1199951171875"/>
         <image name="task-control-target" width="469.5" height="273.75"/>
     </resources>

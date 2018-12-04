@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ListOfEmployeeTableViewCell: UITableViewCell {
+class TaskDetailsTableViewCell: UITableViewCell,BEMCheckBoxDelegate {
     
     @IBOutlet weak var profileImg: UIImageView!
     
     @IBOutlet weak var employeeInfo: UILabel!
     
-    func configureCell(employee:Employee){
+    @IBOutlet weak var checkbox: BEMCheckBox!
+    
+    func configureCell(employee:Employee,checkbox:BEMCheckBox){
         
         guard let employeeName = employee.name  else {
             return
@@ -30,6 +32,7 @@ class ListOfEmployeeTableViewCell: UITableViewCell {
             self.profileImg.image = image
         }
         self.employeeInfo.text = "\(employeeName) \(employeeSurename) \n\(employeePosition)"
+        self.checkbox = checkbox
     }
  
     override func awakeFromNib() {
@@ -42,8 +45,8 @@ class ListOfEmployeeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    @IBAction func checkMarkButtonWasPressed(_ sender: UIButton) {
-    }
+
+ 
     
 
 }
