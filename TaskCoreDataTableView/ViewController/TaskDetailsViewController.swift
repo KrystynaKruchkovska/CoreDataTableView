@@ -11,7 +11,7 @@ import CoreData
 
 
 class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource,BEMCheckBoxDelegate {
-
+    
     var task:Task!
     var coreEmloyeesViewModel:CoreEmloyeesViewModel!
     var selectedIndex:IndexPath!
@@ -47,26 +47,58 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
         guard  let cell = tableView.dequeueReusableCell(withIdentifier: "listOfEmployeeTableViewCell") as? TaskDetailsTableViewCell else {
             return UITableViewCell()
         }
-        let checkMark = BEMCheckBox()
-        checkMark.on = false
-       
+        
+        
         let employee = self.coreEmloyeesViewModel.employees[indexPath.row]
-      
-        cell.configureCell(employee: employee,checkbox:checkMark)
+        
+        var checkboxOn = false
+        
+        if let taskEmployee = self.task.emloyee {
+            checkboxOn = (taskEmployee == employee)
+        }
+        
+        cell.configureCell(employee: employee, checkboxOn: checkboxOn)
+        cell.checkbox.delegate = self
         
         return cell
-   
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let index = IndexPath(row: indexPath.row, section: 0)
-        let currentCell = tableView.cellForRow(at: index) as! TaskDetailsTableViewCell
-     
-    
-    
+    func didTap(_ checkBox: BEMCheckBox) {
+        let indexPath = self.getIndexPath(for:checkBox)
+
+        if indexPath.indices.count < 1 {
+            print("Fatal error")
+            return
+        }
+
+        self.task.emloyee = self.coreEmloyeesViewModel.employees[indexPath.row]
+        self.tableView.reloadData()
     }
     
- 
+    func getIndexPath(for checkbox:BEMCheckBox) -> IndexPath {
+        for cell in self.tableView.visibleCells {
+            if checkbox.isDescendant(of: cell) {
+                guard let indexPath = self.tableView.indexPath(for: cell) else {
+                    continue
+                }
+                
+                return indexPath
+            }
+        }
+        
+        return IndexPath()
+    }
+    
+    
+    //    func didTabButton(checckbox:UIButton) {
+    //        for cell in self.tableView.visibleCells {
+    //            if cell.isDescendant(of: checckbox) {
+    //                let indexPath = self.tableView.indexPath(for: cell)
+    //            }
+    //        }
+    //    }
+    
+    
     
 }
 

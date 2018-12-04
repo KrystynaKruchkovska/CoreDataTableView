@@ -16,7 +16,7 @@ class TaskDetailsTableViewCell: UITableViewCell,BEMCheckBoxDelegate {
     
     @IBOutlet weak var checkbox: BEMCheckBox!
     
-    func configureCell(employee:Employee,checkbox:BEMCheckBox){
+    func configureCell(employee:Employee, checkboxOn:Bool){
         
         guard let employeeName = employee.name  else {
             return
@@ -31,8 +31,10 @@ class TaskDetailsTableViewCell: UITableViewCell,BEMCheckBoxDelegate {
         if let image = UIImage(named: "default-user") {
             self.profileImg.image = image
         }
+        
+        self.checkbox.on = checkboxOn
+        
         self.employeeInfo.text = "\(employeeName) \(employeeSurename) \n\(employeePosition)"
-        self.checkbox = checkbox
     }
  
     override func awakeFromNib() {
