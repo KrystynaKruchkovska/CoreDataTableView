@@ -14,7 +14,7 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
     
     var task:Task!
     var coreEmloyeesViewModel:CoreEmloyeesViewModel!
-    var coreTaskViewModel:CoreTasksModelView!
+    var coreTasksViewModel:CoreTasksModelView!
     var selectedIndex:IndexPath!
     
     @IBOutlet weak var tableView: UITableView!
@@ -72,8 +72,16 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
             return
         }
 
-        self.task.emloyee = self.coreEmloyeesViewModel.employees[indexPath.row]
-        print(self.task.emloyee)
+        if !checkBox.on {
+          
+            self.coreTasksViewModel.unset(task: self.task)
+        } else {
+            let tappedEmployee = self.coreEmloyeesViewModel.employees[indexPath.row]
+            self.coreTasksViewModel.set(employee: tappedEmployee, for: self.task)
+        }
+        
+        
+        print("tapped")
         self.tableView.reloadData()
     }
     
@@ -91,6 +99,7 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
         
         return IndexPath()
     }
+
     
 
     

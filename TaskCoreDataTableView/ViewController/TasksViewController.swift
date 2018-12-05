@@ -11,7 +11,7 @@ import CoreData
 
 class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    let tasksViewModel = CoreTasksModelView()
+    let coreTasksViewModel = CoreTasksModelView()
     var coreEmployeesViewModel:CoreEmloyeesViewModel!
    
     @IBOutlet weak var tableView: UITableView!
@@ -33,7 +33,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        tasksViewModel.fetchTasks { (success ) in
+        coreTasksViewModel.fetchTasks { (success ) in
             tableView.reloadData()
         }
     }
@@ -70,7 +70,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func addTask(priorityLevel:String) {
-        self.tasksViewModel.addTask(textFieldText: self.textField.text!, priorityLevel: priorityLevel)
+        self.coreTasksViewModel.addTask(textFieldText: self.textField.text!, priorityLevel: priorityLevel)
         textField.text = ""
         textField.placeholder = "Something else?"
         self.tableView.reloadData()
@@ -81,14 +81,14 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tasksViewModel.tasks.count
+        return self.coreTasksViewModel.tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "tasksTableViewCell") as? TasksTableViewCell else {
             fatalError("The dequeued cell is not an instance of TaskTableViewCell.")
         }
-        let task = tasksViewModel.tasks[indexPath.row]
+        let task = coreTasksViewModel.tasks[indexPath.row]
         let taskNumber = indexPath.row + 1
 
         cell.configureCell(task: task, taskNum: taskNumber)
@@ -99,8 +99,9 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if let indexPath = tableView.indexPathForSelectedRow {
             let selectedRow = indexPath.row
             let singleTaskViewController = segue.destination as! TaskDetailsViewController
-            singleTaskViewController.task = self.tasksViewModel.tasks[selectedRow]
+            singleTaskViewController.task = self.coreTasksViewModel.tasks[selectedRow]
             singleTaskViewController.coreEmloyeesViewModel = self.coreEmployeesViewModel
+            singleTaskViewController.coreTasksViewModel = self.coreTasksViewModel
         }
         print("prepare for segue")
     }
@@ -108,8 +109,8 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
-            self.tasksViewModel.removeTask(atIndexPath: indexPath)
-            self.tasksViewModel.fetchTasks(completion: { (success) in
+            self.coreTasksViewModel.removeTask(atIndexPath: indexPath)
+            self.coreTasksViewModel.fetchTasks(completion: { (success) in
             })
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }

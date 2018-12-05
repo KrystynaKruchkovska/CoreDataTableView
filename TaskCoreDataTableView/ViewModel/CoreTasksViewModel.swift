@@ -41,7 +41,7 @@ class CoreTasksModelView:CoreViewModelProtocol {
             self.tasks = try manegedContext.fetch(fetchRequest)
             print("Successflly fetch data")
             completion(true)
-        }catch {
+        } catch {
             debugPrint("Could not catch \(error.localizedDescription)")
             completion(false)
         }
@@ -50,6 +50,18 @@ class CoreTasksModelView:CoreViewModelProtocol {
     func removeTask(atIndexPath indexPath: IndexPath) {
       self.removeManegedObject(atIndexPath: indexPath, manegedContext: container?.viewContext, managedObjectsArray: self.tasks)
         
+    }
+    
+    func set(employee:Employee,for task:Task){
+        task.emloyee = employee
+        //employee.addToTasks(task)
+        guard let manegedContext = container?.viewContext else {
+            return
+        }
+        self.saveManegedContext(manegedContext: manegedContext)
+    }
+    func unset(task:Task){
+        task.emloyee = nil
     }
     
 
