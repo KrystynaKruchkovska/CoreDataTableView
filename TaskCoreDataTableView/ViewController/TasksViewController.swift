@@ -40,7 +40,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBAction func addButtonWasPressed(_ sender: UIButton) {
         
-        if textField.text != nil && textField.text != "What is your plan for today?" {
+        if textField.text != "" && textField.text != "What is your plan for today?" {
            
             let alert = UIAlertController(title: "Do you know level of priority for this task?", message: "Hight priority must be done first!", preferredStyle: .alert)
             

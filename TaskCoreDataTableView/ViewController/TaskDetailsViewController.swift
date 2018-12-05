@@ -73,7 +73,6 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
         }
 
         if !checkBox.on {
-          
             self.coreTasksViewModel.unset(task: self.task)
         } else {
             let tappedEmployee = self.coreEmloyeesViewModel.employees[indexPath.row]
