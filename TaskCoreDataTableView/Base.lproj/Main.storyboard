@@ -111,13 +111,13 @@
                                                                 <constraint firstAttribute="width" constant="30" id="OMJ-LL-CtP"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="zS8-u1-YaW">
                                                             <rect key="frame" x="36" y="0.0" width="239" height="32"/>
                                                             <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIT-qh-cNb">
@@ -126,7 +126,7 @@
                                                                 <constraint firstAttribute="width" constant="32" id="ISa-GE-wID"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="12"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -144,6 +144,7 @@
                                                 <constraint firstItem="teh-Cw-Gpa" firstAttribute="leading" secondItem="njO-h1-po3" secondAttribute="leadingMargin" constant="16" id="n0e-YP-btE"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.24705882352941178" green="0.3529411764705882" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="prioritylevel" destination="lIT-qh-cNb" id="tQE-Vr-9ew"/>
                                             <outlet property="taskLabel" destination="zS8-u1-YaW" id="4mA-fz-F0K"/>
@@ -372,7 +373,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vO1-Ko-B6f">
                                 <rect key="frame" x="0.0" y="186" width="375" height="481"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.73083561658859253" green="0.24269309639930725" blue="0.13686871528625488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="481" id="gb4-PI-PYg"/>
                                 </constraints>
@@ -394,10 +395,10 @@
                                                                 <constraint firstAttribute="height" constant="50" id="pB0-TY-24g"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="FirstName/Surename         position" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="vRO-GX-XJd">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="FirstName/Surename         position" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="vRO-GX-XJd">
                                                             <rect key="frame" x="56" y="0.0" width="201" height="50"/>
-                                                            <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="19"/>
+                                                            <color key="textColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBl-ia-j36" customClass="BEMCheckBox">
@@ -445,6 +446,7 @@
                                                 <constraint firstItem="lsY-gz-ymd" firstAttribute="top" secondItem="Vlz-Lv-4qt" secondAttribute="topMargin" constant="8" id="uFJ-pM-GmV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.24705882352941178" green="0.3529411764705882" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="checkbox" destination="tBl-ia-j36" id="5nu-Zh-pGd"/>
                                             <outlet property="employeeInfo" destination="vRO-GX-XJd" id="cBr-yy-Zsc"/>

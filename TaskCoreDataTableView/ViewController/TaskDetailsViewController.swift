@@ -14,6 +14,7 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
     
     var task:Task!
     var coreEmloyeesViewModel:CoreEmloyeesViewModel!
+    var coreTaskViewModel:CoreTasksModelView!
     var selectedIndex:IndexPath!
     
     @IBOutlet weak var tableView: UITableView!
@@ -72,6 +73,7 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
         }
 
         self.task.emloyee = self.coreEmloyeesViewModel.employees[indexPath.row]
+        print(self.task.emloyee)
         self.tableView.reloadData()
     }
     
@@ -83,22 +85,14 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
                 }
                 
                 return indexPath
+                
             }
         }
         
         return IndexPath()
     }
     
-    
-    //    func didTabButton(checckbox:UIButton) {
-    //        for cell in self.tableView.visibleCells {
-    //            if cell.isDescendant(of: checckbox) {
-    //                let indexPath = self.tableView.indexPath(for: cell)
-    //            }
-    //        }
-    //    }
-    
-    
+
     
 }
 

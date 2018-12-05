@@ -21,6 +21,7 @@
 		04A028E421AF08090046F798 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A028E321AF08090046F798 /* Task.swift */; };
 		04A028E621AF09EB0046F798 /* CoreTasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A028E521AF09EB0046F798 /* CoreTasksViewModel.swift */; };
 		04A028E921AF2ECF0046F798 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A028E821AF2ECF0046F798 /* Constants.swift */; };
+		04A11A1E21B810A9003638C8 /* PriorityLevelControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A11A1D21B810A9003638C8 /* PriorityLevelControl.swift */; };
 		04D88E9F21B429E900729F5D /* RoundedImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D88E9E21B429E800729F5D /* RoundedImg.swift */; };
 		04D88EA121B42A4300729F5D /* TaskDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D88EA021B42A4300729F5D /* TaskDetailsTableViewCell.swift */; };
 		04F02E0421B6CB1500C9C2FC /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F02DFC21B6CB1400C9C2FC /* BEMAnimationManager.m */; };
@@ -52,6 +53,7 @@
 		04A028E321AF08090046F798 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		04A028E521AF09EB0046F798 /* CoreTasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTasksViewModel.swift; sourceTree = "<group>"; };
 		04A028E821AF2ECF0046F798 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		04A11A1D21B810A9003638C8 /* PriorityLevelControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityLevelControl.swift; sourceTree = "<group>"; };
 		04D88E9E21B429E800729F5D /* RoundedImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImg.swift; sourceTree = "<group>"; };
 		04D88EA021B42A4300729F5D /* TaskDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		04F02DFA21B6C10700C9C2FC /* CheckBox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CheckBox-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				043D41FB21B425C4007A6247 /* RoundedButton.swift */,
 				04D88E9E21B429E800729F5D /* RoundedImg.swift */,
 				04D88EA021B42A4300729F5D /* TaskDetailsTableViewCell.swift */,
+				04A11A1D21B810A9003638C8 /* PriorityLevelControl.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				04096BFA21B2AE59002DDD08 /* Employee.swift in Sources */,
 				04F7EC1121AB192A00E3C0D0 /* TasksViewController.swift in Sources */,
 				04F7EC0F21AB192A00E3C0D0 /* AppDelegate.swift in Sources */,
+				04A11A1E21B810A9003638C8 /* PriorityLevelControl.swift in Sources */,
 				043D41FC21B425C4007A6247 /* RoundedButton.swift in Sources */,
 				04096BF321B15758002DDD08 /* EnteringViewController.swift in Sources */,
 				04096C1721B2C79B002DDD08 /* AddEmloyeeInfoVC.swift in Sources */,
