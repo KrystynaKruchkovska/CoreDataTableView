@@ -88,25 +88,25 @@
                                     <action selector="addButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KDM-ZT-u14"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cNL-Qc-dI6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cNL-Qc-dI6">
                                 <rect key="frame" x="0.0" y="142" width="375" height="525"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="525" id="mjp-NS-StN"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tasksTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tasksTableViewCell" rowHeight="70" id="zhi-cS-6qr" customClass="TasksTableViewCell" customModule="TaskCoreDataTableView" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tasksTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tasksTableViewCell" rowHeight="90" id="zhi-cS-6qr" customClass="TasksTableViewCell" customModule="TaskCoreDataTableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zhi-cS-6qr" id="njO-h1-po3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" tag="17" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="teh-Cw-Gpa">
-                                                    <rect key="frame" x="31" y="19" width="313" height="32"/>
+                                                    <rect key="frame" x="31" y="19" width="313" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSJ-kO-zGj">
-                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="32"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="30" id="OMJ-LL-CtP"/>
                                                             </constraints>
@@ -115,38 +115,36 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="zS8-u1-YaW">
-                                                            <rect key="frame" x="36" y="0.0" width="239" height="32"/>
+                                                            <rect key="frame" x="36" y="0.0" width="221" height="50"/>
                                                             <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIT-qh-cNb">
-                                                            <rect key="frame" x="281" y="0.0" width="32" height="32"/>
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jxt-7K-Gdh" customClass="FlagPriority" customModule="TaskCoreDataTableView" customModuleProvider="target">
+                                                            <rect key="frame" x="263" y="0.0" width="50" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="32" id="ISa-GE-wID"/>
+                                                                <constraint firstAttribute="height" constant="50" id="4t8-yZ-3bt"/>
+                                                                <constraint firstAttribute="width" constant="50" id="Q9i-Pv-utd"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="12"/>
-                                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        </view>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="Jxt-7K-Gdh" firstAttribute="leading" secondItem="zS8-u1-YaW" secondAttribute="trailing" constant="6" id="4nT-aa-9Pk"/>
                                                         <constraint firstItem="zS8-u1-YaW" firstAttribute="centerY" secondItem="VSJ-kO-zGj" secondAttribute="centerY" id="L9M-O7-VZl"/>
-                                                        <constraint firstItem="lIT-qh-cNb" firstAttribute="leading" secondItem="zS8-u1-YaW" secondAttribute="trailing" constant="6" id="gec-Ji-lfS"/>
-                                                        <constraint firstItem="zS8-u1-YaW" firstAttribute="leading" secondItem="VSJ-kO-zGj" secondAttribute="trailing" constant="6" id="hkS-Ii-13G"/>
+                                                        <constraint firstItem="Jxt-7K-Gdh" firstAttribute="centerY" secondItem="zS8-u1-YaW" secondAttribute="centerY" id="bkn-HQ-DXf"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="teh-Cw-Gpa" firstAttribute="top" secondItem="njO-h1-po3" secondAttribute="topMargin" constant="8" id="5wi-Ob-gsE"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="teh-Cw-Gpa" secondAttribute="bottom" constant="8" id="BGG-Wq-469"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="teh-Cw-Gpa" secondAttribute="trailing" constant="16" id="BJ0-73-gNP"/>
                                                 <constraint firstItem="teh-Cw-Gpa" firstAttribute="leading" secondItem="njO-h1-po3" secondAttribute="leadingMargin" constant="16" id="n0e-YP-btE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.24705882352941178" green="0.3529411764705882" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="prioritylevel" destination="lIT-qh-cNb" id="tQE-Vr-9ew"/>
+                                            <outlet property="flagPriority" destination="Jxt-7K-Gdh" id="wa5-BG-AUU"/>
                                             <outlet property="taskLabel" destination="zS8-u1-YaW" id="4mA-fz-F0K"/>
                                             <outlet property="taskNumberLbl" destination="VSJ-kO-zGj" id="t8u-jz-OE5"/>
                                             <segue destination="blZ-Gp-WdQ" kind="show" identifier="toListOfEmployee" id="P8Q-qO-f5d"/>
