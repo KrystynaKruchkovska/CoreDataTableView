@@ -8,8 +8,8 @@
 
 import UIKit
 
-class EmployeeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+class EmployeeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,PresentEmployeeTaskInfoProtocol {
+
     var coreEmloyeesViewModel:CoreEmloyeesViewModel!
     
     
@@ -55,6 +55,7 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         let employee = coreEmloyeesViewModel.employees[indexPath.row]
         cell.configureCell(employee: employee)
+        cell.delegate = self
         
         return cell
     }
@@ -71,6 +72,13 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
         
         deleteAction.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
         return [deleteAction]
+    }
+    
+    func infoButtonDidSelect() {
+        let presentInfo = EmployeeTaskInfoVC()
+        presentInfo.coreEmloyeesViewModel = self.coreEmloyeesViewModel
+        presentInfo.modalPresentationStyle = .fullScreen
+        present(presentInfo, animated: true, completion: nil)
     }
     
     

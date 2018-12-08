@@ -233,14 +233,14 @@
                                                                 <constraint firstAttribute="width" constant="50" id="oif-2V-gRd"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="FirstName/Surename         position" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="hRf-Fb-KKi">
-                                                            <rect key="frame" x="56" y="0.0" width="150.5" height="50"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="FirstName/Surename         position" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="hRf-Fb-KKi">
+                                                            <rect key="frame" x="56" y="0.0" width="115.5" height="50"/>
                                                             <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total tasks" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5I-d3-680">
-                                                            <rect key="frame" x="212.5" y="0.0" width="100.5" height="50"/>
+                                                            <rect key="frame" x="177.5" y="0.0" width="79.5" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="dmy-ME-55V"/>
                                                             </constraints>
@@ -248,6 +248,16 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCi-Kc-7Sb">
+                                                            <rect key="frame" x="263" y="0.0" width="50" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="Xjt-4i-gEK"/>
+                                                            </constraints>
+                                                            <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <connections>
+                                                                <action selector="infoButtonWasPressed:" destination="AHR-r4-auo" eventType="touchUpInside" id="CSj-js-GpV"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="jD3-1N-6dp" secondAttribute="bottom" id="9F1-DH-sKY"/>
@@ -256,7 +266,10 @@
                                                         <constraint firstItem="jD3-1N-6dp" firstAttribute="leading" secondItem="LHp-tN-OGA" secondAttribute="leading" id="OG7-MN-qAV"/>
                                                         <constraint firstItem="jD3-1N-6dp" firstAttribute="leading" secondItem="LHp-tN-OGA" secondAttribute="leading" id="Pvv-7M-Rwk"/>
                                                         <constraint firstItem="jD3-1N-6dp" firstAttribute="top" secondItem="LHp-tN-OGA" secondAttribute="top" id="QMW-qO-svV"/>
-                                                        <constraint firstAttribute="trailing" secondItem="n5I-d3-680" secondAttribute="trailing" id="d0C-1n-Vom"/>
+                                                        <constraint firstItem="FCi-Kc-7Sb" firstAttribute="leading" secondItem="n5I-d3-680" secondAttribute="trailing" constant="6" id="YI1-of-nRR"/>
+                                                        <constraint firstAttribute="trailing" secondItem="FCi-Kc-7Sb" secondAttribute="trailing" id="aQB-0W-dKV"/>
+                                                        <constraint firstAttribute="bottom" secondItem="FCi-Kc-7Sb" secondAttribute="bottom" id="gRY-wh-DBN"/>
+                                                        <constraint firstItem="FCi-Kc-7Sb" firstAttribute="top" secondItem="LHp-tN-OGA" secondAttribute="top" id="uK2-Bm-jx7"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
