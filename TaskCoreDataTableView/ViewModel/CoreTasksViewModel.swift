@@ -14,7 +14,7 @@ class CoreTasksModelView:CoreViewModelProtocol {
     public private(set) var tasks:[Task] = []
     let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     
-    func addTask (textFieldText:String, priorityLevel:String){
+    func addTask (textFieldText:String, priorityLevel:TaskPriority){
         guard let manegedContext = container?.viewContext else{return}
         let taskObject = Task(context: manegedContext)
         taskObject.taskDescription = textFieldText

@@ -10,5 +10,15 @@ import UIKit
 import CoreData
 
 class Task: NSManagedObject {
-
+    // var priorityLevelValue:Int32
+    var priorityLevel: TaskPriority {
+        get {
+            return TaskPriority(rawValue: self.priorityLevelValue)!
+        }
+        set {
+            self.priorityLevelValue = newValue.rawValue
+        }
+    }
+    
 }
+

@@ -52,19 +52,19 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             {
                 (alert: UIAlertAction!) -> Void in
 
-                self.addTask(priorityLevel: "HIGH")
+                self.addTask(priorityLevel: .high)
             }))
             
             alert.addAction(UIAlertAction(title: "Rather MEDIUM.", style: .default, handler:
             {
                 (alert: UIAlertAction!) -> Void in
-               self.addTask(priorityLevel: "MEDIUM")
+               self.addTask(priorityLevel: .middle)
             }))
             
             alert.addAction(UIAlertAction(title: "LOW!", style: .default, handler:
             {
                 (alert: UIAlertAction!) -> Void in
-                self.addTask(priorityLevel: "LOW")
+                self.addTask(priorityLevel: .low)
            }))
             
             self.present(alert, animated: true, completion: nil)
@@ -72,7 +72,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    func addTask(priorityLevel:String) {
+    func addTask(priorityLevel:TaskPriority) {
         self.coreTasksViewModel.addTask(textFieldText: self.textField.text!, priorityLevel: priorityLevel)
         textField.text = ""
         textField.placeholder = "Something else?"

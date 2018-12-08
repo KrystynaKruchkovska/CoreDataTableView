@@ -31,12 +31,17 @@ class TasksTableViewCell: UITableViewCell {
     }
     
     func configureFlagColor(task:Task){
-        if(task.priorityLevel?.contains("HIGH"))!{
-            flagPriority.flagColor = .red
-        }else if ((task.priorityLevel?.contains("MIDDLE"))!){
-            flagPriority.flagColor = .yellow
-        }else if ((task.priorityLevel?.contains("LOW"))!){
-            flagPriority.flagColor = .green
+      setFlagColor(for: task.priorityLevel)
+    }
+    
+    func setFlagColor(for priority: TaskPriority) {
+        switch priority {
+        case .high:
+            return flagPriority.flagColor = .red
+        case .middle:
+            return flagPriority.flagColor = .yellow
+        case .low:
+            return flagPriority.flagColor = .green
         }
     }
 

@@ -34,6 +34,7 @@
 		04F7EC1921AB193200E3C0D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F7EC1721AB193200E3C0D0 /* LaunchScreen.storyboard */; };
 		04F7EC2121AB21F900E3C0D0 /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7EC2021AB21F900E3C0D0 /* TasksTableViewCell.swift */; };
 		04F86A9521BB029A0024BA77 /* FlagPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F86A9421BB029A0024BA77 /* FlagPriority.swift */; };
+		04FB240721BC145100E45F89 /* TaskPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB240621BC145100E45F89 /* TaskPriority.swift */; };
 		656CBB62C54F39ED0AF32AFE /* Pods_TaskCoreDataTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0384190FA6E41C7918A0C1CF /* Pods_TaskCoreDataTableView.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		04F7EC1A21AB193200E3C0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04F7EC2021AB21F900E3C0D0 /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
 		04F86A9421BB029A0024BA77 /* FlagPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagPriority.swift; sourceTree = "<group>"; };
+		04FB240621BC145100E45F89 /* TaskPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPriority.swift; sourceTree = "<group>"; };
 		913724A805DED993C4E10390 /* Pods-TaskCoreDataTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskCoreDataTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaskCoreDataTableView/Pods-TaskCoreDataTableView.release.xcconfig"; sourceTree = "<group>"; };
 		D8CCE1F44766CB76618882F7 /* Pods-TaskCoreDataTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskCoreDataTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaskCoreDataTableView/Pods-TaskCoreDataTableView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +131,7 @@
 			children = (
 				04A028E321AF08090046F798 /* Task.swift */,
 				04096BF921B2AE59002DDD08 /* Employee.swift */,
+				04FB240621BC145100E45F89 /* TaskPriority.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				043D41FA21B41B2D007A6247 /* TaskDetailsViewController.swift in Sources */,
 				04F86A9521BB029A0024BA77 /* FlagPriority.swift in Sources */,
 				04D88E9F21B429E900729F5D /* RoundedImg.swift in Sources */,
+				04FB240721BC145100E45F89 /* TaskPriority.swift in Sources */,
 				04A028E421AF08090046F798 /* Task.swift in Sources */,
 				04096BF721B19B4D002DDD08 /* EmployeeTableViewCell.swift in Sources */,
 				043D41F821B40247007A6247 /* CoreViewModelProtocol.swift in Sources */,
