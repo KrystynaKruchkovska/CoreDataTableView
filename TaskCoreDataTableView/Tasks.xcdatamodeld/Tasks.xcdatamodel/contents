@@ -4,6 +4,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="position" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="surname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalTasks" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="tasks" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="emloyee" inverseEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Task" representedClassName=".Task" syncable="YES" codeGenerationType="category">
@@ -12,7 +13,7 @@
         <relationship name="emloyee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Employee" inverseName="tasks" inverseEntity="Employee" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Employee" positionX="166.6953125" positionY="-12.3125" width="128" height="105"/>
+        <element name="Employee" positionX="166.6953125" positionY="-12.3125" width="128" height="120"/>
         <element name="Task" positionX="-63" positionY="-18" width="128" height="90"/>
     </elements>
 </model>

@@ -26,11 +26,15 @@ class EmployeeTableViewCell: UITableViewCell {
         guard let employeePosition = employee.position  else {
             return
         }
+        guard let employeeTotalTasks = employee.tasks?.count  else {
+            return
+        }
         self.personalInfo.text = "\(employeeName) \(employeeSurename) \n\(employeePosition)"
         
         if let image = UIImage(named: "default-user") {
             self.profileImage.image = image
         }
+        self.totalTasks.text = String("Tasks:\(employeeTotalTasks)")
         
     }
     

@@ -54,7 +54,6 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
             fatalError("The dequeued cell is not an instance of TaskTableViewCell.")
         }
         let employee = coreEmloyeesViewModel.employees[indexPath.row]
-        
         cell.configureCell(employee: employee)
         
         return cell
