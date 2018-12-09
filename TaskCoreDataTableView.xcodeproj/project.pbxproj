@@ -35,7 +35,7 @@
 		04F7EC2121AB21F900E3C0D0 /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7EC2021AB21F900E3C0D0 /* TasksTableViewCell.swift */; };
 		04F86A9521BB029A0024BA77 /* FlagPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F86A9421BB029A0024BA77 /* FlagPriority.swift */; };
 		04FB240721BC145100E45F89 /* TaskPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB240621BC145100E45F89 /* TaskPriority.swift */; };
-		04FB242421BC432600E45F89 /* employeeeInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FB242321BC432600E45F89 /* employeeeInfoCell.xib */; };
+		04FB242421BC432600E45F89 /* EmployeeeInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FB242321BC432600E45F89 /* EmployeeeInfoCell.xib */; };
 		04FB242721BC4BA700E45F89 /* EmployeeTaskInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB242521BC4BA700E45F89 /* EmployeeTaskInfoVC.swift */; };
 		04FB242821BC4BA700E45F89 /* EmployeeTaskInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FB242621BC4BA700E45F89 /* EmployeeTaskInfoVC.xib */; };
 		04FB242A21BC4D4A00E45F89 /* EmployeeTaskInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB242921BC4D4A00E45F89 /* EmployeeTaskInfoTableViewCell.swift */; };
@@ -79,7 +79,7 @@
 		04F7EC2021AB21F900E3C0D0 /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
 		04F86A9421BB029A0024BA77 /* FlagPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagPriority.swift; sourceTree = "<group>"; };
 		04FB240621BC145100E45F89 /* TaskPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPriority.swift; sourceTree = "<group>"; };
-		04FB242321BC432600E45F89 /* employeeeInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = employeeeInfoCell.xib; sourceTree = "<group>"; };
+		04FB242321BC432600E45F89 /* EmployeeeInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeeInfoCell.xib; sourceTree = "<group>"; };
 		04FB242521BC4BA700E45F89 /* EmployeeTaskInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTaskInfoVC.swift; sourceTree = "<group>"; };
 		04FB242621BC4BA700E45F89 /* EmployeeTaskInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeTaskInfoVC.xib; sourceTree = "<group>"; };
 		04FB242921BC4D4A00E45F89 /* EmployeeTaskInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTaskInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -213,7 +213,7 @@
 			children = (
 				04096C1621B2C79B002DDD08 /* AddEmloyeeInfoVC.xib */,
 				04FB242621BC4BA700E45F89 /* EmployeeTaskInfoVC.xib */,
-				04FB242321BC432600E45F89 /* employeeeInfoCell.xib */,
+				04FB242321BC432600E45F89 /* EmployeeeInfoCell.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -297,7 +297,7 @@
 			files = (
 				04096C1821B2C79B002DDD08 /* AddEmloyeeInfoVC.xib in Resources */,
 				04F7EC1921AB193200E3C0D0 /* LaunchScreen.storyboard in Resources */,
-				04FB242421BC432600E45F89 /* employeeeInfoCell.xib in Resources */,
+				04FB242421BC432600E45F89 /* EmployeeeInfoCell.xib in Resources */,
 				04F7EC1621AB193200E3C0D0 /* Assets.xcassets in Resources */,
 				04F7EC1421AB192A00E3C0D0 /* Main.storyboard in Resources */,
 				04FB242821BC4BA700E45F89 /* EmployeeTaskInfoVC.xib in Resources */,

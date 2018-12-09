@@ -45,8 +45,8 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard  let cell = tableView.dequeueReusableCell(withIdentifier: "listOfEmployeeTableViewCell") as? TaskDetailsTableViewCell else {
-            return UITableViewCell()
+        guard  let cell = tableView.dequeueReusableCell(withIdentifier:TABLE_VIEW_CELL_IDENTIFIRES.listOfEmployeeCell) as? TaskDetailsTableViewCell else {
+            fatalError("The dequeued cell is not an instance of TaskTableViewCell.")
         }
         
         
@@ -65,7 +65,8 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
     }
     
     func didTap(_ checkBox: BEMCheckBox) {
-        let indexPath = self.getIndexPath(for:checkBox)
+        let indexPath = self.coreEmloyeesViewModel.getIndexPath(for: checkBox, tableView: self.tableView)
+        
 
         if indexPath.indices.count < 1 {
             print("Fatal error")
@@ -83,21 +84,7 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
         print("tapped")
         self.tableView.reloadData()
     }
-    
-    func getIndexPath(for checkbox:BEMCheckBox) -> IndexPath {
-        for cell in self.tableView.visibleCells {
-            if checkbox.isDescendant(of: cell) {
-                guard let indexPath = self.tableView.indexPath(for: cell) else {
-                    continue
-                }
-                
-                return indexPath
-                
-            }
-        }
-        
-        return IndexPath()
-    }
+ 
 
     
 

@@ -14,14 +14,17 @@ class EmployeeTaskInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var taskNumber: UILabel!
     @IBOutlet weak var taskTextView: UITextView!
     
-    
-    
-    func configureCell(employee:Employee){
-        
+    func configureCellFor(task:Task,taskNum:Int){
+        self.taskTextView.text = task.taskDescription
+        self.taskNumber.text = "\(taskNum)"
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,6 +32,5 @@ class EmployeeTaskInfoTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-
-
+    
 }

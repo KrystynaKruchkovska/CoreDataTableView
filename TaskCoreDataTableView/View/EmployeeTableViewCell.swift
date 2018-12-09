@@ -13,7 +13,8 @@ class EmployeeTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var personalInfo: UILabel!
     @IBOutlet weak var totalTasks: UILabel!
-    var delegate:PresentEmployeeTaskInfoProtocol!
+    
+    weak var delegate:PresentEmployeeTaskInfoProtocol?
     
     func configureCell(employee:Employee){
         
@@ -40,14 +41,16 @@ class EmployeeTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
+    
     @IBAction func infoButtonWasPressed(_ sender: UIButton) {
-        self.delegate.infoButtonDidSelect()
+        if let delegate = self.delegate {
+            delegate.infoButtonDidSelect(sender)
+        }
     }
 
 }
-protocol PresentEmployeeTaskInfoProtocol {
-    func infoButtonDidSelect()
+
+protocol PresentEmployeeTaskInfoProtocol: class {
+    func infoButtonDidSelect(_ infoBtn: UIButton)
 }

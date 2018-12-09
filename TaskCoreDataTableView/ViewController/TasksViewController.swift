@@ -88,7 +88,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "tasksTableViewCell") as? TasksTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TABLE_VIEW_CELL_IDENTIFIRES.taskCell) as? TasksTableViewCell else {
             fatalError("The dequeued cell is not an instance of TaskTableViewCell.")
         }
         let task = coreTasksViewModel.tasks[indexPath.row]

@@ -8,8 +8,10 @@
 
 import UIKit
 
-class EmployeeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,PresentEmployeeTaskInfoProtocol {
-
+class EmployeeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PresentEmployeeTaskInfoProtocol {
+   
+    
+    
     var coreEmloyeesViewModel:CoreEmloyeesViewModel!
     
     
@@ -50,7 +52,7 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "employeeTableViewCell") as? EmployeeTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TABLE_VIEW_CELL_IDENTIFIRES.employeeCell) as? EmployeeTableViewCell else {
             fatalError("The dequeued cell is not an instance of TaskTableViewCell.")
         }
         let employee = coreEmloyeesViewModel.employees[indexPath.row]
@@ -74,12 +76,17 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
         return [deleteAction]
     }
     
-    func infoButtonDidSelect() {
-        let presentInfo = EmployeeTaskInfoVC()
-        presentInfo.coreEmloyeesViewModel = self.coreEmloyeesViewModel
-        presentInfo.modalPresentationStyle = .fullScreen
-        present(presentInfo, animated: true, completion: nil)
-    }
-    
-    
+    func infoButtonDidSelect(_ infoBtn: UIButton) {
+        let indexPath = self.coreEmloyeesViewModel.getIndexPath(for: infoBtn, tableView: self.tableView)
+        if indexPath.indices.count < 1 {
+            print("Fatal error")
+            return
+        }
+            let presentInfo = EmployeeTaskInfoVC()
+            presentInfo.coreEmloyeesViewModel = self.coreEmloyeesViewModel
+            presentInfo.employee = self.coreEmloyeesViewModel.employees[indexPath.row]
+            presentInfo.modalPresentationStyle = .fullScreen
+            present(presentInfo, animated: true, completion: nil)
+        }
+ 
 }

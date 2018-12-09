@@ -11,30 +11,42 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmployeeTaskInfoTableViewCell" customModule="TaskCoreDataTableView" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="EmployeeTaskInfoTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmployeeTaskInfoTableViewCell" rowHeight="83" id="HYI-H8-QjP" customClass="EmployeeTaskInfoTableViewCell" customModule="TaskCoreDataTableView" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmployeeTaskInfoTableViewCell" rowHeight="83" id="HYI-H8-QjP" customClass="EmployeeTaskInfoTableViewCell" customModule="TaskCoreDataTableView" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HYI-H8-QjP" id="sED-jf-uXx">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="82.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiU-EV-o6v">
-                        <rect key="frame" x="6" y="5" width="42" height="72"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiU-EV-o6v">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="82.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="MGE-2d-dog"/>
+                            <constraint firstAttribute="width" constant="50" id="pbG-Y9-8q9"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.96470588239999999" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="avw-rB-qqd">
-                        <rect key="frame" x="62" y="0.0" width="319" height="83"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="avw-rB-qqd">
+                        <rect key="frame" x="50" y="0.0" width="325" height="82.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
+                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="RiU-EV-o6v" firstAttribute="leading" secondItem="sED-jf-uXx" secondAttribute="leading" id="0qK-Bn-c2j"/>
+                    <constraint firstItem="avw-rB-qqd" firstAttribute="leading" secondItem="RiU-EV-o6v" secondAttribute="trailing" id="IWa-f9-y9b"/>
+                    <constraint firstAttribute="trailing" secondItem="avw-rB-qqd" secondAttribute="trailing" id="Pcy-3s-5iD"/>
+                    <constraint firstAttribute="bottom" secondItem="RiU-EV-o6v" secondAttribute="bottom" id="ZdY-Av-Sgw"/>
+                    <constraint firstAttribute="bottom" secondItem="avw-rB-qqd" secondAttribute="bottom" id="Zj2-d0-3fy"/>
+                    <constraint firstItem="avw-rB-qqd" firstAttribute="top" secondItem="sED-jf-uXx" secondAttribute="top" id="f1e-5M-8vL"/>
+                    <constraint firstItem="RiU-EV-o6v" firstAttribute="top" secondItem="sED-jf-uXx" secondAttribute="top" id="i5F-qa-0Rg"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="taskNumber" destination="RiU-EV-o6v" id="vI7-Kj-lRt"/>
