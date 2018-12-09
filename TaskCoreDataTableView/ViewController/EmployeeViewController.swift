@@ -77,7 +77,7 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func infoButtonDidSelect(_ infoBtn: UIButton) {
-        let indexPath = self.coreEmloyeesViewModel.getIndexPath(for: infoBtn, tableView: self.tableView)
+        let indexPath = tableView.getIndexPath(for: infoBtn)
         if indexPath.indices.count < 1 {
             print("Fatal error")
             return

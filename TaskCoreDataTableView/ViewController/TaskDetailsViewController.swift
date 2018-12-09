@@ -65,9 +65,8 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
     }
     
     func didTap(_ checkBox: BEMCheckBox) {
-        let indexPath = self.coreEmloyeesViewModel.getIndexPath(for: checkBox, tableView: self.tableView)
+        let indexPath = tableView.getIndexPath(for: checkBox)
         
-
         if indexPath.indices.count < 1 {
             print("Fatal error")
             return

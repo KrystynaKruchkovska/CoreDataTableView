@@ -40,25 +40,8 @@ class CoreEmloyeesViewModel: CoreViewModelProtocol {
         }
     }
     
-    
     func removeEmployee(atIndexPath indexPath: IndexPath) {
         self.removeManegedObject(atIndexPath: indexPath, manegedContext: container?.viewContext, managedObjectsArray: self.employees)
     }
-    
-    func getIndexPath(for action:UIControl, tableView:UITableView) -> IndexPath {
-        for cell in tableView.visibleCells {
-            if action.isDescendant(of: cell) {
-                guard let indexPath = tableView.indexPath(for: cell) else {
-                    continue
-                }
-                
-                return indexPath
-                
-            }
-        }
-        
-        return IndexPath()
-    }
- 
     
 }

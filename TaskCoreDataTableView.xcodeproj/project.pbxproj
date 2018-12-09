@@ -39,6 +39,7 @@
 		04FB242721BC4BA700E45F89 /* EmployeeTaskInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB242521BC4BA700E45F89 /* EmployeeTaskInfoVC.swift */; };
 		04FB242821BC4BA700E45F89 /* EmployeeTaskInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FB242621BC4BA700E45F89 /* EmployeeTaskInfoVC.xib */; };
 		04FB242A21BC4D4A00E45F89 /* EmployeeTaskInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB242921BC4D4A00E45F89 /* EmployeeTaskInfoTableViewCell.swift */; };
+		04FB242C21BD724C00E45F89 /* UITableView+IndexPathGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB242B21BD724C00E45F89 /* UITableView+IndexPathGetter.swift */; };
 		656CBB62C54F39ED0AF32AFE /* Pods_TaskCoreDataTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0384190FA6E41C7918A0C1CF /* Pods_TaskCoreDataTableView.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		04FB242521BC4BA700E45F89 /* EmployeeTaskInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTaskInfoVC.swift; sourceTree = "<group>"; };
 		04FB242621BC4BA700E45F89 /* EmployeeTaskInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeTaskInfoVC.xib; sourceTree = "<group>"; };
 		04FB242921BC4D4A00E45F89 /* EmployeeTaskInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTaskInfoTableViewCell.swift; sourceTree = "<group>"; };
+		04FB242B21BD724C00E45F89 /* UITableView+IndexPathGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+IndexPathGetter.swift"; sourceTree = "<group>"; };
 		913724A805DED993C4E10390 /* Pods-TaskCoreDataTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskCoreDataTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaskCoreDataTableView/Pods-TaskCoreDataTableView.release.xcconfig"; sourceTree = "<group>"; };
 		D8CCE1F44766CB76618882F7 /* Pods-TaskCoreDataTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskCoreDataTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaskCoreDataTableView/Pods-TaskCoreDataTableView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +134,7 @@
 				043D41FB21B425C4007A6247 /* RoundedButton.swift */,
 				04D88E9E21B429E800729F5D /* RoundedImg.swift */,
 				04F86A9421BB029A0024BA77 /* FlagPriority.swift */,
+				04FB242B21BD724C00E45F89 /* UITableView+IndexPathGetter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				04096BF321B15758002DDD08 /* EnteringViewController.swift in Sources */,
 				04096C1721B2C79B002DDD08 /* AddEmloyeeInfoVC.swift in Sources */,
 				04F02E0521B6CB1500C9C2FC /* BEMCheckBox.m in Sources */,
+				04FB242C21BD724C00E45F89 /* UITableView+IndexPathGetter.swift in Sources */,
 				04FB242721BC4BA700E45F89 /* EmployeeTaskInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
