@@ -3,6 +3,7 @@
     <entity name="Employee" representedClassName=".Employee" syncable="YES" codeGenerationType="category">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="position" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profileImg" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="surname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="totalTasks" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="tasks" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="emloyee" inverseEntity="Task" syncable="YES"/>
@@ -13,7 +14,7 @@
         <relationship name="emloyee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Employee" inverseName="tasks" inverseEntity="Employee" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Employee" positionX="166.6953125" positionY="-12.3125" width="128" height="120"/>
+        <element name="Employee" positionX="166.6953125" positionY="-12.3125" width="128" height="135"/>
         <element name="Task" positionX="-63" positionY="-18" width="128" height="90"/>
     </elements>
 </model>

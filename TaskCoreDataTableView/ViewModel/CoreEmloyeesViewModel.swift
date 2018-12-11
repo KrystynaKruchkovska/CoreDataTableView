@@ -44,4 +44,5 @@ class CoreEmloyeesViewModel: CoreViewModelProtocol {
         self.removeManegedObject(atIndexPath: indexPath, manegedContext: container?.viewContext, managedObjectsArray: self.employees)
     }
     
+    
 }
