@@ -27,7 +27,7 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        coreEmloyeesViewModel.fetchEmpoyees { (success) in
+        coreEmloyeesViewModel.fetchCoreObjects { (success) in
             self.tableView.reloadData()
         }
     }
@@ -41,7 +41,7 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return coreEmloyeesViewModel.employees.count
+        return coreEmloyeesViewModel.coreObjects.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,7 +50,7 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
         }
         
         
-        let employee = self.coreEmloyeesViewModel.employees[indexPath.row]
+        let employee = self.coreEmloyeesViewModel.coreObjects[indexPath.row]
         
         var checkboxOn = false
         
@@ -75,7 +75,7 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
         if !checkBox.on {
             self.coreTasksViewModel.unset(task: self.task)
         } else {
-            let tappedEmployee = self.coreEmloyeesViewModel.employees[indexPath.row]
+            let tappedEmployee = self.coreEmloyeesViewModel.coreObjects[indexPath.row]
             self.coreTasksViewModel.set(employee: tappedEmployee, for: self.task)
         }
         

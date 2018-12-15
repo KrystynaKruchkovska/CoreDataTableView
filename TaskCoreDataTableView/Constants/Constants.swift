@@ -9,7 +9,7 @@
 import Foundation
  
 struct CONSTANTS {
-    static let TASKS_PERSISTENT_CONTAINER = "Tasks"
+    static let MODEL_NAME = "Tasks"
     static let main = "Main"
 }
 struct TABLE_VIEW_CELL_IDENTIFIRES {

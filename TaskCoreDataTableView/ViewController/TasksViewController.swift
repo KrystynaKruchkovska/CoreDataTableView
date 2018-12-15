@@ -36,7 +36,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        coreTasksViewModel.fetchTasks { (success ) in
+        coreTasksViewModel.fetchCoreObjects { (success ) in
             tableView.reloadData()
         }
     }
@@ -84,14 +84,14 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.coreTasksViewModel.tasks.count
+        return self.coreTasksViewModel.coreObjects.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TABLE_VIEW_CELL_IDENTIFIRES.taskCell) as? TasksTableViewCell else {
             fatalError("The dequeued cell is not an instance of TaskTableViewCell.")
         }
-        let task = coreTasksViewModel.tasks[indexPath.row]
+        let task = coreTasksViewModel.coreObjects[indexPath.row]
         let taskNumber = indexPath.row + 1
 
         cell.configureCell(task: task, taskNum: taskNumber)
@@ -102,7 +102,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if let indexPath = tableView.indexPathForSelectedRow {
             let selectedRow = indexPath.row
             let singleTaskViewController = segue.destination as! TaskDetailsViewController
-            singleTaskViewController.task = self.coreTasksViewModel.tasks[selectedRow]
+            singleTaskViewController.task = self.coreTasksViewModel.coreObjects[selectedRow]
             singleTaskViewController.coreEmloyeesViewModel = self.coreEmployeesViewModel
             singleTaskViewController.coreTasksViewModel = self.coreTasksViewModel
         }
@@ -112,8 +112,8 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
-            self.coreTasksViewModel.removeTask(atIndexPath: indexPath)
-            self.coreTasksViewModel.fetchTasks(completion: { (success) in
+            self.coreTasksViewModel.removeCoreObject(atIndexPath: indexPath)
+            self.coreTasksViewModel.fetchCoreObjects(completion: { (success) in
             })
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }

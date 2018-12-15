@@ -9,48 +9,18 @@
 import UIKit
 import CoreData
 
-class CoreTasksModelView:CoreViewModelProtocol {
-    
-    public private(set) var tasks:[Task] = []
-    let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
+class CoreTasksModelView : CoreViewModelGeneric<Task> {
+   
     
     func addTask (textFieldText:String, priorityLevel:TaskPriority){
         guard let manegedContext = container?.viewContext else{return}
         let taskObject = Task(context: manegedContext)
         taskObject.taskDescription = textFieldText
         taskObject.priorityLevel = priorityLevel
-        appendTask(task: taskObject)
+        appendCoreObject(coreObject: taskObject)
     }
+
     
-    func appendTask(task:Task){
-        tasks.append(task)
-        
-        guard let manegedContext = container?.viewContext else {
-            return
-        }
-        saveManegedContext(manegedContext: manegedContext)
-    }
-    
-    func fetchTasks( completion:(_ complete:Bool)->() ){
-        guard  let manegedContext = container?.viewContext else {
-            return
-        }
-        let className = String(describing: Task.self)
-        let fetchRequest = NSFetchRequest<Task>(entityName: className)
-        do{
-            self.tasks = try manegedContext.fetch(fetchRequest)
-            print("Successflly fetch data")
-            completion(true)
-        } catch {
-            debugPrint("Could not catch \(error.localizedDescription)")
-            completion(false)
-        }
-    }
-    
-    func removeTask(atIndexPath indexPath: IndexPath) {
-      self.removeManegedObject(atIndexPath: indexPath, manegedContext: container?.viewContext, managedObjectsArray: self.tasks)
-        
-    }
     
     func set(employee:Employee,for task:Task){
         task.emloyee = employee

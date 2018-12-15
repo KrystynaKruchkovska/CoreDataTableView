@@ -32,7 +32,7 @@ class AddEmloyeeInfoVC: UIViewController {
         let employee = self.getUserFromTextFields()
         
         if let employee = employee {
-            coreEmloyeesViewModel.appendEmployee(employee: employee)
+            coreEmloyeesViewModel.appendCoreObject(coreObject: employee)
             self.dismiss(animated: true, completion: nil)
             print(employee)
         } else {

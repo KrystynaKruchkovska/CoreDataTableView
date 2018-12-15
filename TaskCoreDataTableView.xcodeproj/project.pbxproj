@@ -14,7 +14,7 @@
 		04096BFA21B2AE59002DDD08 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04096BF921B2AE59002DDD08 /* Employee.swift */; };
 		04096C1721B2C79B002DDD08 /* AddEmloyeeInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04096C1521B2C79B002DDD08 /* AddEmloyeeInfoVC.swift */; };
 		04096C1821B2C79B002DDD08 /* AddEmloyeeInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04096C1621B2C79B002DDD08 /* AddEmloyeeInfoVC.xib */; };
-		043D41F821B40247007A6247 /* CoreViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D41F721B40247007A6247 /* CoreViewModelProtocol.swift */; };
+		043D41F821B40247007A6247 /* CoreViewModelGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D41F721B40247007A6247 /* CoreViewModelGeneric.swift */; };
 		043D41FA21B41B2D007A6247 /* TaskDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D41F921B41B2D007A6247 /* TaskDetailsViewController.swift */; };
 		043D41FC21B425C4007A6247 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D41FB21B425C4007A6247 /* RoundedButton.swift */; };
 		04A028E221AF050C0046F798 /* Tasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04A028E021AF050C0046F798 /* Tasks.xcdatamodeld */; };
@@ -52,7 +52,7 @@
 		04096BF921B2AE59002DDD08 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		04096C1521B2C79B002DDD08 /* AddEmloyeeInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmloyeeInfoVC.swift; sourceTree = "<group>"; };
 		04096C1621B2C79B002DDD08 /* AddEmloyeeInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddEmloyeeInfoVC.xib; sourceTree = "<group>"; };
-		043D41F721B40247007A6247 /* CoreViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreViewModelProtocol.swift; sourceTree = "<group>"; };
+		043D41F721B40247007A6247 /* CoreViewModelGeneric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreViewModelGeneric.swift; sourceTree = "<group>"; };
 		043D41F921B41B2D007A6247 /* TaskDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsViewController.swift; sourceTree = "<group>"; };
 		043D41FB21B425C4007A6247 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		04A028E121AF050C0046F798 /* Tasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tasks.xcdatamodel; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 			children = (
 				04A028E521AF09EB0046F798 /* CoreTasksViewModel.swift */,
 				04096BE021B146AE002DDD08 /* CoreEmloyeesViewModel.swift */,
-				043D41F721B40247007A6247 /* CoreViewModelProtocol.swift */,
+				043D41F721B40247007A6247 /* CoreViewModelGeneric.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -249,7 +249,6 @@
 				04F7EC0721AB192A00E3C0D0 /* Sources */,
 				04F7EC0821AB192A00E3C0D0 /* Frameworks */,
 				04F7EC0921AB192A00E3C0D0 /* Resources */,
-				80BDE5052AC825ECB0942663 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -332,30 +331,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		80BDE5052AC825ECB0942663 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TaskCoreDataTableView/Pods-TaskCoreDataTableView-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaskCoreDataTableView/Pods-TaskCoreDataTableView-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -377,7 +352,7 @@
 				04FB240721BC145100E45F89 /* TaskPriority.swift in Sources */,
 				04A028E421AF08090046F798 /* Task.swift in Sources */,
 				04096BF721B19B4D002DDD08 /* EmployeeTableViewCell.swift in Sources */,
-				043D41F821B40247007A6247 /* CoreViewModelProtocol.swift in Sources */,
+				043D41F821B40247007A6247 /* CoreViewModelGeneric.swift in Sources */,
 				04F02E0721B6CB1500C9C2FC /* BEMCheckBoxGroup.m in Sources */,
 				04FB242A21BC4D4A00E45F89 /* EmployeeTaskInfoTableViewCell.swift in Sources */,
 				04A028E921AF2ECF0046F798 /* Constants.swift in Sources */,
@@ -538,6 +513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V8ZG3WLBMM;
+				"GCC_OPTIMIZATION_LEVEL[arch=*]" = 0;
 				INFOPLIST_FILE = TaskCoreDataTableView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (

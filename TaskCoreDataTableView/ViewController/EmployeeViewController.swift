@@ -26,7 +26,7 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        coreEmloyeesViewModel.fetchEmpoyees { (success) in
+        coreEmloyeesViewModel.fetchCoreObjects { (success) in
             self.tableView.reloadData()
         }
     }
@@ -48,14 +48,14 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return coreEmloyeesViewModel.employees.count
+        return coreEmloyeesViewModel.coreObjects.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TABLE_VIEW_CELL_IDENTIFIRES.employeeCell) as? EmployeeTableViewCell else {
             fatalError("The dequeued cell is not an instance of TaskTableViewCell.")
         }
-        let employee = coreEmloyeesViewModel.employees[indexPath.row]
+        let employee = coreEmloyeesViewModel.coreObjects[indexPath.row]
         cell.configureCell(employee: employee)
         cell.delegate = self
         
@@ -66,8 +66,8 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
             
-            self.coreEmloyeesViewModel.removeEmployee(atIndexPath: indexPath)
-            self.coreEmloyeesViewModel.fetchEmpoyees(completion: { (success) in
+            self.coreEmloyeesViewModel.removeCoreObject(atIndexPath: indexPath)
+            self.coreEmloyeesViewModel.fetchCoreObjects(completion: { (success) in
             })
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }
@@ -84,7 +84,7 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
         }
             let presentInfo = EmployeeTaskInfoVC()
             presentInfo.coreEmloyeesViewModel = self.coreEmloyeesViewModel
-            presentInfo.employee = self.coreEmloyeesViewModel.employees[indexPath.row]
+            presentInfo.employee = self.coreEmloyeesViewModel.coreObjects[indexPath.row]
             presentInfo.modalPresentationStyle = .fullScreen
             present(presentInfo, animated: true, completion: nil)
         }
