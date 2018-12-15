@@ -14,9 +14,9 @@ class GenericDataSource<EntityType: NSManagedObject, CellType: UITableViewCell>:
     
     var tableView: UITableView
     var coreViewModel: CoreViewModelGeneric <EntityType>
-    var configureCell:(CellType, EntityType) -> Void
+    var configureCell:(CellType, EntityType, IndexPath ) -> Void
     
-    init(tableView: UITableView,coreViewModel: CoreViewModelGeneric <EntityType>,configureCell: @escaping (CellType, EntityType) -> Void ) {
+    init(tableView: UITableView,coreViewModel: CoreViewModelGeneric <EntityType>,configureCell: @escaping (CellType, EntityType, IndexPath) -> Void ) {
         self.tableView = tableView
         self.coreViewModel = coreViewModel
         self.configureCell = configureCell
@@ -36,7 +36,8 @@ class GenericDataSource<EntityType: NSManagedObject, CellType: UITableViewCell>:
         
         let coreObject = self.coreViewModel.coreObjects[indexPath.row]
         
-        self.configureCell(cell, coreObject)
+        
+        self.configureCell(cell, coreObject, indexPath)
         return cell
     }
     

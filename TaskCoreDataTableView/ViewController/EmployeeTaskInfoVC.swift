@@ -9,7 +9,7 @@
 import UIKit
 
 class EmployeeTaskInfoVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
-    
+
     var coreEmloyeesViewModel:CoreEmloyeesViewModel!
     var employeeTasksArray:[Task]!
     var employee:Employee!

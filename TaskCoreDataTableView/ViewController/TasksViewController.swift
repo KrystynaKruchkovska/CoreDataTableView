@@ -9,23 +9,26 @@
 import UIKit
 import CoreData
 
-class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class TasksViewController: UIViewController, UITableViewDelegate {
     
     let coreTasksViewModel = CoreTasksModelView()
     var coreEmployeesViewModel:CoreEmloyeesViewModel!
+    var genericDataSource: GenericDataSource<Task,TasksTableViewCell>!
 
-
-    
-   
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var motivationLable: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
         self.tableView.layer.cornerRadius = 20
+        self.genericDataSource = GenericDataSource(tableView: tableView, coreViewModel: coreTasksViewModel, configureCell: { (cell, managedObject, indexPath) in
+            let taskNumber = indexPath.row + 1
+            cell.configureCell(task: managedObject, taskNum: taskNumber)
+        })
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self.genericDataSource
     }
     
     @IBAction func backButtonWasPressed(_ sender: UIButton) {
@@ -83,21 +86,6 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.coreTasksViewModel.coreObjects.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TasksTableViewCell.defaultReuseIdentifier) as? TasksTableViewCell else {
-            fatalError("The dequeued cell is not an instance of TaskTableViewCell.")
-        }
-        let task = coreTasksViewModel.coreObjects[indexPath.row]
-        let taskNumber = indexPath.row + 1
-
-        cell.configureCell(task: task, taskNum: taskNumber)
-        return cell
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow {
             let selectedRow = indexPath.row
