@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0402341021C571B500E40E5D /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402340F21C571B500E40E5D /* GenericDataSource.swift */; };
+		0402341321C5785B00E40E5D /* UITableViewCell+defaultReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402341221C5785B00E40E5D /* UITableViewCell+defaultReuseIdentifier.swift */; };
 		04096BE121B146AE002DDD08 /* CoreEmloyeesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04096BE021B146AE002DDD08 /* CoreEmloyeesViewModel.swift */; };
 		04096BF321B15758002DDD08 /* EnteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04096BF221B15758002DDD08 /* EnteringViewController.swift */; };
 		04096BF521B15DEB002DDD08 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04096BF421B15DEB002DDD08 /* EmployeeViewController.swift */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		0384190FA6E41C7918A0C1CF /* Pods_TaskCoreDataTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskCoreDataTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0402340F21C571B500E40E5D /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
+		0402341221C5785B00E40E5D /* UITableViewCell+defaultReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+defaultReuseIdentifier.swift"; sourceTree = "<group>"; };
 		04096BE021B146AE002DDD08 /* CoreEmloyeesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreEmloyeesViewModel.swift; sourceTree = "<group>"; };
 		04096BF221B15758002DDD08 /* EnteringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnteringViewController.swift; sourceTree = "<group>"; };
 		04096BF421B15DEB002DDD08 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0402341121C5784600E40E5D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0402341221C5785B00E40E5D /* UITableViewCell+defaultReuseIdentifier.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		04096BDD21B144AA002DDD08 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +122,7 @@
 				04096C1521B2C79B002DDD08 /* AddEmloyeeInfoVC.swift */,
 				043D41F921B41B2D007A6247 /* TaskDetailsViewController.swift */,
 				04FB242521BC4BA700E45F89 /* EmployeeTaskInfoVC.swift */,
+				0402340F21C571B500E40E5D /* GenericDataSource.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -127,6 +140,7 @@
 		04096BDF21B1454C002DDD08 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0402341121C5784600E40E5D /* Cell */,
 				04F7EC2021AB21F900E3C0D0 /* TasksTableViewCell.swift */,
 				04096BF621B19B4D002DDD08 /* EmployeeTableViewCell.swift */,
 				04D88EA021B42A4300729F5D /* TaskDetailsTableViewCell.swift */,
@@ -345,6 +359,7 @@
 				04D88EA121B42A4300729F5D /* TaskDetailsTableViewCell.swift in Sources */,
 				04F02E0421B6CB1500C9C2FC /* BEMAnimationManager.m in Sources */,
 				04A028E621AF09EB0046F798 /* CoreTasksViewModel.swift in Sources */,
+				0402341321C5785B00E40E5D /* UITableViewCell+defaultReuseIdentifier.swift in Sources */,
 				04F02E0621B6CB1500C9C2FC /* BEMPathManager.m in Sources */,
 				043D41FA21B41B2D007A6247 /* TaskDetailsViewController.swift in Sources */,
 				04F86A9521BB029A0024BA77 /* FlagPriority.swift in Sources */,
@@ -356,6 +371,7 @@
 				04F02E0721B6CB1500C9C2FC /* BEMCheckBoxGroup.m in Sources */,
 				04FB242A21BC4D4A00E45F89 /* EmployeeTaskInfoTableViewCell.swift in Sources */,
 				04A028E921AF2ECF0046F798 /* Constants.swift in Sources */,
+				0402341021C571B500E40E5D /* GenericDataSource.swift in Sources */,
 				04096BFA21B2AE59002DDD08 /* Employee.swift in Sources */,
 				04F7EC1121AB192A00E3C0D0 /* TasksViewController.swift in Sources */,
 				04F7EC0F21AB192A00E3C0D0 /* AppDelegate.swift in Sources */,

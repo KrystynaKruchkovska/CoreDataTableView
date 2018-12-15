@@ -45,7 +45,7 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard  let cell = tableView.dequeueReusableCell(withIdentifier:TABLE_VIEW_CELL_IDENTIFIRES.listOfEmployeeCell) as? TaskDetailsTableViewCell else {
+        guard  let cell = tableView.dequeueReusableCell(withIdentifier:TaskDetailsTableViewCell.defaultReuseIdentifier) as? TaskDetailsTableViewCell else {
             fatalError("The dequeued cell is not an instance of TaskTableViewCell.")
         }
         

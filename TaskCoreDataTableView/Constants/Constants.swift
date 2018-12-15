@@ -13,7 +13,7 @@ struct CONSTANTS {
     static let main = "Main"
 }
 struct TABLE_VIEW_CELL_IDENTIFIRES {
-    static let taskCell = "tasksTableViewCell"
+    static let taskCell = "TasksTableViewCell"
     static let employeeCell = "employeeTableViewCell"
     static let employeeTaskInfoCell = "EmployeeTaskInfoTableViewCell"
     static let listOfEmployeeCell = "listOfEmployeeTableViewCell"

@@ -52,7 +52,7 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TABLE_VIEW_CELL_IDENTIFIRES.employeeCell) as? EmployeeTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: EmployeeTableViewCell.defaultReuseIdentifier) as? EmployeeTableViewCell else {
             fatalError("The dequeued cell is not an instance of TaskTableViewCell.")
         }
         let employee = coreEmloyeesViewModel.coreObjects[indexPath.row]
