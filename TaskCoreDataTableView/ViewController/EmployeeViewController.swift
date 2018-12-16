@@ -50,12 +50,7 @@ class EmployeeViewController: UIViewController, UITableViewDelegate, PresentEmpl
     @IBAction func backButtonWasPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    
+
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in

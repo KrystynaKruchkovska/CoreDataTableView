@@ -10,19 +10,34 @@ import UIKit
 import CoreData
 
 
-class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource,BEMCheckBoxDelegate {
+class TaskDetailsViewController: UIViewController,UITableViewDelegate,BEMCheckBoxDelegate {
     
     var task:Task!
     var coreEmloyeesViewModel:CoreEmloyeesViewModel!
     var coreTasksViewModel:CoreTasksModelView!
     var selectedIndex:IndexPath!
+    var genericDataSource: GenericDataSource<Employee,TaskDetailsTableViewCell>!
+    
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.genericDataSource = GenericDataSource(tableView: tableView, coreViewModel: coreEmloyeesViewModel, configureCell: { (cell, managedObject, indexPath) in
+            
+            var checkboxOn = false
+            
+            if let taskEmployee = self.task.emloyee {
+                checkboxOn = (taskEmployee == managedObject)
+            }
+            
+            cell.configureCell(employee: managedObject, checkboxOn: checkboxOn)
+            cell.checkbox.delegate = self
+        })
+        
         self.tableView.delegate = self
-        self.tableView.dataSource = self
+        self.tableView.dataSource = self.genericDataSource
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,34 +50,7 @@ class TaskDetailsViewController: UIViewController,UITableViewDelegate, UITableVi
     @IBAction func backButtonWasPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return coreEmloyeesViewModel.coreObjects.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard  let cell = tableView.dequeueReusableCell(withIdentifier:TaskDetailsTableViewCell.defaultReuseIdentifier) as? TaskDetailsTableViewCell else {
-            fatalError("The dequeued cell is not an instance of TaskTableViewCell.")
-        }
-        
-        
-        let employee = self.coreEmloyeesViewModel.coreObjects[indexPath.row]
-        
-        var checkboxOn = false
-        
-        if let taskEmployee = self.task.emloyee {
-            checkboxOn = (taskEmployee == employee)
-        }
-        
-        cell.configureCell(employee: employee, checkboxOn: checkboxOn)
-        cell.checkbox.delegate = self
-        
-        return cell
-    }
+
     
     func didTap(_ checkBox: BEMCheckBox) {
         let indexPath = tableView.getIndexPath(for: checkBox)

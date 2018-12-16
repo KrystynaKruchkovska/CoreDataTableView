@@ -82,10 +82,7 @@ class TasksViewController: UIViewController, UITableViewDelegate {
         self.tableView.reloadData()
         
     }
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow {
             let selectedRow = indexPath.row
