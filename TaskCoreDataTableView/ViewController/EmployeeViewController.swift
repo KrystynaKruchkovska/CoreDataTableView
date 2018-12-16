@@ -8,19 +8,27 @@
 
 import UIKit
 
-class EmployeeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PresentEmployeeTaskInfoProtocol {
+class EmployeeViewController: UIViewController, UITableViewDelegate, PresentEmployeeTaskInfoProtocol {
    
     
     
     var coreEmloyeesViewModel:CoreEmloyeesViewModel!
+    var genericDataSource: GenericDataSource<Employee,EmployeeTableViewCell>!
     
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.genericDataSource = GenericDataSource(tableView: tableView, coreViewModel: coreEmloyeesViewModel, configureCell: { (cell, managedObject, indexPath) in
+            cell.configureCell(employee: managedObject)
+            cell.delegate = self
+            
+        })
+        
         self.tableView.delegate = self
-        self.tableView.dataSource = self
+        self.tableView.dataSource = self.genericDataSource
         
     }
     
@@ -47,20 +55,6 @@ class EmployeeViewController: UIViewController, UITableViewDataSource, UITableVi
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return coreEmloyeesViewModel.coreObjects.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: EmployeeTableViewCell.defaultReuseIdentifier) as? EmployeeTableViewCell else {
-            fatalError("The dequeued cell is not an instance of TaskTableViewCell.")
-        }
-        let employee = coreEmloyeesViewModel.coreObjects[indexPath.row]
-        cell.configureCell(employee: employee)
-        cell.delegate = self
-        
-        return cell
-    }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
